@@ -1,0 +1,48 @@
+.footer {
+  display: flex;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: $black;
+  justify-content: space-between;
+  margin-bottom: 135px;
+
+  &__tel {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: $black;
+  }
+
+  &__contacts {
+    display: grid;
+    row-gap: 15px;
+    max-width: 331px;
+    height: fit-content;
+    align-self: center;
+  }
+
+  &__map {
+    width: 653px;
+    height: 313px;
+  }
+}
+
+footer {
+  height: 106px;
+  background: #1f1f1f;
+
+  .footer__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 43px;
+  }
+
+  .footer__t {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 19px;
+    color: $white;
+  }
+}

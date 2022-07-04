@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Cera Pro', sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &--big {
+    max-width: 1320px;
+  }
+}
+
+.button {
+  font-family: 'Cera Pro';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  min-width: 185px;
+
+  &.primary {
+    background: $blue;
+    border-radius: 4px;
+    height: 34.83px;
+  }
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: $blue;
+  margin: 34px 0 36px;
+}
+
+.primary-color {
+  color: $blue;
+}
+
+.gray-color {
+  color: $brown;
+}
+
+.size-2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.size-3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
