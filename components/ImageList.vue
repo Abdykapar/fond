@@ -2,10 +2,12 @@
   <div class="container">
     <h2 class="section-title">Галерея</h2>
     <div class="image-list">
-      <image-card v-for="item in gallery" :key="item.id" :item="item" />
+      <image-card v-for="item in filteredGallery" :key="item.id" :item="item" />
     </div>
     <div class="section__show-all">
-      <button class="section__show-all__btn">Все Фотографии</button>
+      <router-link to="/gallery" class="section__show-all__btn"
+        >Все Фотографии</router-link
+      >
     </div>
   </div>
 </template>
@@ -18,6 +20,9 @@ export default {
   components: { ImageCard },
   computed: {
     ...mapState(['gallery']),
+    filteredGallery() {
+      return this.gallery.slice(0, 3)
+    },
   },
 }
 </script>
@@ -27,5 +32,6 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 27px;
+  row-gap: 18px;
 }
 </style>

@@ -11,12 +11,19 @@ export const state = () => ({
   gallery: [],
   links: [],
   news: [],
+  singleNews: {},
+  singleGallery: {},
 })
 
 export const actions = {
   fetchGallery({ commit }) {
     return axios.get(galleryPrefix).then((res) => {
       commit('SET_GALLERY', res.data)
+    })
+  },
+  fetchGallerySingle({ commit }, id) {
+    return axios.get(`${galleryPrefix}/${id}`).then((res) => {
+      commit('SET_SINGLE_GALLERY', res.data)
     })
   },
   fetchLinks({ commit }) {
@@ -29,16 +36,27 @@ export const actions = {
       commit('SET_NEWS', res.data)
     })
   },
+  fetchSingleNews({ commit }, id) {
+    return axios.get(`${newsPrefix}/${id}`).then((res) => {
+      commit('SET_SINGLE_NEW', res.data)
+    })
+  },
 }
 
 export const mutations = {
   SET_GALLERY(state, data) {
     state.gallery = data
   },
+  SET_SINGLE_GALLERY(state, data) {
+    state.singleGallery = data
+  },
   SET_LINKS(state, data) {
     state.links = data
   },
   SET_NEWS(state, data) {
     state.news = data
+  },
+  SET_SINGLE_NEW(state, data) {
+    state.singleNews = data
   },
 }

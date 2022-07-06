@@ -1,13 +1,26 @@
 <template>
-  <router-link to="#">
-    <div class="image-card" :style="`background-image: url('${item.image}')`">
-      <div class="image-card__content">
+  <div>
+    <div
+      v-if="withoutLink"
+      class="image-card"
+      :style="`background-image: url('${item.image}')`"
+    >
+      <div v-if="withContent" class="image-card__content">
         <p class="image-card__text">
           {{ itemContent.title }}
         </p>
       </div>
     </div>
-  </router-link>
+    <router-link v-else :to="`/gallery/${item.id}`">
+      <div class="image-card" :style="`background-image: url('${item.image}')`">
+        <div v-if="withContent" class="image-card__content">
+          <p class="image-card__text">
+            {{ itemContent.title }}
+          </p>
+        </div>
+      </div>
+    </router-link>
+  </div>
 </template>
 
 <script>
@@ -18,10 +31,17 @@ export default {
       type: Object,
       default: () => ({}),
     },
+    withContent: {
+      type: Boolean,
+      default: true,
+    },
+    withoutLink: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     itemContent() {
-      console.log('item', this.item)
       if (!this.item.translations) return {}
       return this.item.translations[Object.keys(this.item.translations)[0]]
     },

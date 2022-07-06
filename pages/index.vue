@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import ImageList from '../components/ImageList.vue'
+import ImageList from '@/components/ImageList.vue'
 import NewsList from '@/components/NewsList.vue'
 import Header from '@/components/IHeader.vue'
 import HomeSlider from '@/components/home/HomeSlider.vue'

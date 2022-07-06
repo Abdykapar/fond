@@ -2,9 +2,11 @@
   <div class="i-card">
     <img class="i-card__img" :src="item.image" alt="" />
     <div class="i-card__content">
-      <h3 class="i-card__title">
-        {{ itemContent.title }}
-      </h3>
+      <router-link :to="`/news/${item.id}`">
+        <h3 class="i-card__title">
+          {{ itemContent.title }}
+        </h3>
+      </router-link>
       <p class="i-card__text">
         {{ itemContent.content | truncate(300, '...') }}
       </p>

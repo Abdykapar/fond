@@ -5,7 +5,9 @@
       <i-card-2 v-for="item in links" :key="item.id" :item="item" />
     </div>
     <div class="section__show-all">
-      <button class="section__show-all__btn">Все Ссылки</button>
+      <router-link to="/links" class="section__show-all__btn"
+        >Все Ссылки</router-link
+      >
     </div>
   </div>
 </template>
