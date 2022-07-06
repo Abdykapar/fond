@@ -1,5 +1,6 @@
 .slide {
   position: relative;
+  display: grid;
 
   &__content {
     position: absolute;
@@ -21,6 +22,11 @@
     padding: 0;
     margin: 0 auto;
   }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+  }
 }
 
 .i-card {
@@ -35,6 +41,7 @@
 
   &__content {
     margin-left: 35px;
+    width: 100%;
   }
 
   &__title {

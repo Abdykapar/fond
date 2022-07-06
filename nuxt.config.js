@@ -34,4 +34,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  axios: {
+    baseURL: '165.227.147.217:8888/api', // Used as fallback if no runtime config is provided
+  },
 }

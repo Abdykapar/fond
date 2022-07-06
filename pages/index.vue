@@ -19,5 +19,10 @@ import IFooter from '@/components/IFooter.vue'
 export default {
   name: 'IndexPage',
   components: { Header, HomeSlider, NewsList, LinksList, ImageList, IFooter },
+  async asyncData({ store }) {
+    await store.dispatch('fetchGallery')
+    await store.dispatch('fetchLinks')
+    await store.dispatch('fetchNews')
+  },
 }
 </script>

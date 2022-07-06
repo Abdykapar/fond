@@ -1,10 +1,9 @@
 <template>
   <router-link to="#">
-    <div class="image-card" :style="`background-image: url('/img/news.png')`">
+    <div class="image-card" :style="`background-image: url('${item.image}')`">
       <div class="image-card__content">
         <p class="image-card__text">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy
+          {{ itemContent.title }}
         </p>
       </div>
     </div>
@@ -14,6 +13,19 @@
 <script>
 export default {
   name: 'ImageCard',
+  props: {
+    item: {
+      type: Object,
+      default: () => ({}),
+    },
+  },
+  computed: {
+    itemContent() {
+      console.log('item', this.item)
+      if (!this.item.translations) return {}
+      return this.item.translations[Object.keys(this.item.translations)[0]]
+    },
+  },
 }
 </script>
 

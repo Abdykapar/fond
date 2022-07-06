@@ -1,26 +1,48 @@
 <template>
   <div class="i-card">
-    <img class="i-card__img" src="/img/news.png" alt="" />
+    <img class="i-card__img" :src="item.image" alt="" />
     <div class="i-card__content">
       <h3 class="i-card__title">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy
+        {{ itemContent.title }}
       </h3>
       <p class="i-card__text">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries,
+        {{ itemContent.content | truncate(300, '...') }}
       </p>
-      <span class="i-card__date">12/06/2022</span>
+      <span class="i-card__date">{{ format(item.updated_at) }}</span>
     </div>
   </div>
 </template>
 
 <script>
+import moment from 'moment'
 export default {
   name: 'ICard',
+  filters: {
+    truncate(text, length, suffix) {
+      if (text.length > length) {
+        return text.substring(0, length) + suffix
+      } else {
+        return text
+      }
+    },
+  },
+  props: {
+    item: {
+      type: Object,
+      default: () => ({}),
+    },
+  },
+  computed: {
+    itemContent() {
+      if (!this.item.translations) return {}
+      return this.item.translations[Object.keys(this.item.translations)[0]]
+    },
+  },
+  methods: {
+    format(date) {
+      return moment(date).format('DD/MM/YYYY')
+    },
+  },
 }
 </script>
 
