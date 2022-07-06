@@ -17,29 +17,54 @@ export const state = () => ({
 
 export const actions = {
   fetchGallery({ commit }) {
-    return axios.get(galleryPrefix).then((res) => {
-      commit('SET_GALLERY', res.data)
-    })
+    return axios
+      .get(galleryPrefix)
+      .then((res) => {
+        commit('SET_GALLERY', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   },
   fetchGallerySingle({ commit }, id) {
-    return axios.get(`${galleryPrefix}/${id}`).then((res) => {
-      commit('SET_SINGLE_GALLERY', res.data)
-    })
+    return axios
+      .get(`${galleryPrefix}/${id}`)
+      .then((res) => {
+        commit('SET_SINGLE_GALLERY', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   },
   fetchLinks({ commit }) {
-    return axios.get(linksPrefix).then((res) => {
-      commit('SET_LINKS', res.data)
-    })
+    return axios
+      .get(linksPrefix)
+      .then((res) => {
+        commit('SET_LINKS', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   },
   fetchNews({ commit }) {
-    return axios.get(newsPrefix).then((res) => {
-      commit('SET_NEWS', res.data)
-    })
+    return axios
+      .get(newsPrefix)
+      .then((res) => {
+        commit('SET_NEWS', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   },
   fetchSingleNews({ commit }, id) {
-    return axios.get(`${newsPrefix}/${id}`).then((res) => {
-      commit('SET_SINGLE_NEW', res.data)
-    })
+    return axios
+      .get(`${newsPrefix}/${id}`)
+      .then((res) => {
+        commit('SET_SINGLE_NEW', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   },
 }
 
