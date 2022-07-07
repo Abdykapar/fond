@@ -12,7 +12,9 @@ export const state = () => ({
   links: [],
   news: [],
   singleNews: {},
-  singleGallery: {},
+  singleGallery: {
+    images: [],
+  },
 })
 
 export const actions = {

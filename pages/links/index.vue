@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 import IBreadcrumb from '@/components/IBreadcrumb.vue'
 import IFooter from '@/components/IFooter.vue'
 import IHeader from '@/components/IHeader.vue'
@@ -23,8 +23,14 @@ import ICard2 from '@/components/ICard2.vue'
 export default {
   name: 'ILinks',
   components: { IHeader, IBreadcrumb, IFooter, ICard2 },
-  async asyncData({ store }) {
-    await store.dispatch('fetchLinks')
+  //   async asyncData({ store }) {
+  //     await store.dispatch('fetchLinks')
+  //   },
+  created() {
+    this.fetchLinks()
+  },
+  methods: {
+    ...mapActions(['fetchLinks']),
   },
   computed: {
     ...mapState(['links']),
