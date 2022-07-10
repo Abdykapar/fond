@@ -23,12 +23,12 @@ import ImageCard from '@/components/ImageCard.vue'
 export default {
   name: 'IGallery',
   components: { IHeader, IBreadcrumb, IFooter, ImageCard },
-  //   async asyncData({ store }) {
-  //     await store.dispatch('fetchGallery')
-  //   },
-  created() {
-    this.fetchGallery()
+  async asyncData({ store }) {
+    await store.dispatch('fetchGallery')
   },
+  // created() {
+  //   this.fetchGallery()
+  // },
   methods: {
     ...mapActions(['fetchGallery']),
   },

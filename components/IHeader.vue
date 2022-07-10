@@ -82,13 +82,14 @@
               v-for="child in menu.children"
               :key="child.code"
               :value="child.title"
+              :title="child.title"
             >
-              <router-link class="menu__link" to="/link">
+              <router-link class="menu__link" :to="child.link">
                 {{ child.title }}
               </router-link>
             </a-select-option>
           </a-select>
-          <router-link v-else class="menu__link" to="link">{{
+          <router-link v-else class="menu__link" :to="menu.link">{{
             menu.title
           }}</router-link>
         </li>

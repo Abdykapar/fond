@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapState } from 'vuex'
 import IBreadcrumb from '@/components/IBreadcrumb.vue'
 import IFooter from '@/components/IFooter.vue'
 import IHeader from '@/components/IHeader.vue'
@@ -39,23 +39,8 @@ import ImageCard from '@/components/ImageCard.vue'
 export default {
   name: 'IGallerySingle',
   components: { IHeader, IBreadcrumb, IFooter, ImageCard },
-  filters: {
-    truncate(text, length, suffix) {
-      if (text && text.length > length) {
-        return text.substring(0, length) + suffix
-      } else {
-        return text
-      }
-    },
-  },
-  //   async asyncData({ store, params }) {
-  //     await store.dispatch('fetchGallerySingle', params.id)
-  //   },
-  created() {
-    this.fetchGallerySingle(this.$route.params.id)
-  },
-  methods: {
-    ...mapActions(['fetchGallerySingle']),
+  async asyncData({ store, params }) {
+    await store.dispatch('fetchGallerySingle', params.id)
   },
   computed: {
     ...mapState(['singleGallery']),

@@ -2,10 +2,8 @@
   <div>
     <i-header />
     <i-breadcrumb>
-      <a-breadcrumb-item>
-        <router-link to="/"> Главная </router-link>
-      </a-breadcrumb-item>
-      <a-breadcrumb-item>Новости</a-breadcrumb-item>
+      <a-breadcrumb-item>Деятельность</a-breadcrumb-item>
+      <a-breadcrumb-item>Мероприятие</a-breadcrumb-item>
       <a-breadcrumb-item>{{
         itemContent.title | truncate(100, '...')
       }}</a-breadcrumb-item>
@@ -22,7 +20,7 @@ import IFooter from '@/components/IFooter.vue'
 import IHeader from '@/components/IHeader.vue'
 import NewsContent from '@/components/news/NewsContent.vue'
 export default {
-  name: 'SingleNews',
+  name: 'ActivitySingleEvent',
   components: { IHeader, IFooter, IBreadcrumb, NewsContent },
   async asyncData({ store, params }) {
     await store.dispatch('fetchSingleNews', params.id)

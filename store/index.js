@@ -6,6 +6,7 @@ axios.defaults.headers.common.Accept = 'application/json'
 const newsPrefix = '/news'
 const linksPrefix = '/links'
 const galleryPrefix = '/gallery'
+const activityPrefix = '/activity'
 
 export const state = () => ({
   gallery: [],
@@ -15,6 +16,12 @@ export const state = () => ({
   singleGallery: {
     images: [],
   },
+  events: [],
+  event: {},
+  orgs: [],
+  org: {},
+  projects: [],
+  project: {},
 })
 
 export const actions = {
@@ -68,6 +75,66 @@ export const actions = {
         console.log(err)
       })
   },
+  fetchActivityEvents({ commit }) {
+    return axios
+      .get(`${activityPrefix}/event`)
+      .then((res) => {
+        commit('SET_EVENTS', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  fetchActivityEvent({ commit }, id) {
+    return axios
+      .get(`${activityPrefix}/event/${id}`)
+      .then((res) => {
+        commit('SET_EVENT', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  fetchActivityOrgs({ commit }) {
+    return axios
+      .get(`${activityPrefix}/organization/`)
+      .then((res) => {
+        commit('SET_ORGS', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  fetchActivityOrgSingle({ commit }, id) {
+    return axios
+      .get(`${activityPrefix}/organization/${id}`)
+      .then((res) => {
+        commit('SET_ORG', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  fetchActivityProjects({ commit }) {
+    return axios
+      .get(`${activityPrefix}/activity/project-activity//`)
+      .then((res) => {
+        commit('SET_PROJECTS', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  fetchActivityProject({ commit }, id) {
+    return axios
+      .get(`${activityPrefix}//activity/project-activity/${id}`)
+      .then((res) => {
+        commit('SET_PROJECT', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
 }
 
 export const mutations = {
@@ -82,6 +149,24 @@ export const mutations = {
   },
   SET_NEWS(state, data) {
     state.news = data
+  },
+  SET_EVENTS(state, data) {
+    state.events = data
+  },
+  SET_EVENT(state, data) {
+    state.event = data
+  },
+  SET_ORGS(state, data) {
+    state.orgs = data
+  },
+  SET_ORG(state, data) {
+    state.org = data
+  },
+  SET_PROJECTS(state, data) {
+    state.projects = data
+  },
+  SET_PROJECT(state, data) {
+    state.project = data
   },
   SET_SINGLE_NEW(state, data) {
     state.singleNews = data

@@ -23,12 +23,12 @@ import ICard2 from '@/components/ICard2.vue'
 export default {
   name: 'ILinks',
   components: { IHeader, IBreadcrumb, IFooter, ICard2 },
-  //   async asyncData({ store }) {
-  //     await store.dispatch('fetchLinks')
-  //   },
-  created() {
-    this.fetchLinks()
+  async asyncData({ store }) {
+    await store.dispatch('fetchLinks')
   },
+  // created() {
+  //   this.fetchLinks()
+  // },
   methods: {
     ...mapActions(['fetchLinks']),
   },

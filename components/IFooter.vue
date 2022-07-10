@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div id="contacts" class="container">
       <h2 class="section-title">Контакты</h2>
       <div class="footer">
         <ul class="footer__contacts">
