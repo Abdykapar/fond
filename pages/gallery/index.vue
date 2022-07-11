@@ -3,9 +3,9 @@
     <i-header />
     <i-breadcrumb>
       <a-breadcrumb-item>
-        <router-link to="/"> Главная </router-link>
+        <router-link to="/"> {{ $t('main') }} </router-link>
       </a-breadcrumb-item>
-      <a-breadcrumb-item>Галерея</a-breadcrumb-item>
+      <a-breadcrumb-item>{{ $t('gallery') }}</a-breadcrumb-item>
     </i-breadcrumb>
     <div class="gallery-grid container">
       <image-card v-for="item in gallery" :key="item.id" :item="item" />

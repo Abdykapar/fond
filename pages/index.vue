@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
 import ImageList from '@/components/ImageList.vue'
 import NewsList from '@/components/NewsList.vue'
 import Header from '@/components/IHeader.vue'
@@ -24,14 +23,6 @@ export default {
     await store.dispatch('fetchGallery')
     await store.dispatch('fetchLinks')
     await store.dispatch('fetchNews')
-  },
-  // created() {
-  //   this.fetchGallery()
-  //   this.fetchLinks()
-  //   this.fetchNews()
-  // },
-  methods: {
-    ...mapActions(['fetchGallery', 'fetchLinks', 'fetchNews']),
   },
 }
 </script>

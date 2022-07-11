@@ -3,10 +3,10 @@
     <i-header />
     <i-breadcrumb>
       <a-breadcrumb-item>
-        <router-link to="/"> Главная </router-link>
+        <router-link to="/"> {{ $t('main') }} </router-link>
       </a-breadcrumb-item>
       <a-breadcrumb-item>
-        <router-link to="/gallery">Галерея</router-link>
+        <router-link to="/gallery">{{ $t('gallery') }}</router-link>
       </a-breadcrumb-item>
       <a-breadcrumb-item>{{
         itemContent.title | truncate(100, '...')

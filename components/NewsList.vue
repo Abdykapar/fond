@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="section-title">{{ title }}</h2>
+    <h2 class="section-title">{{ $t(title) }}</h2>
     <div class="news-list">
       <i-card v-for="item in news" :key="item.id" :item="item" />
     </div>
@@ -21,12 +21,12 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Новости',
+      default: 'news',
     },
     allBtnData: {
       type: Object,
       default: () => ({
-        title: 'Все Новости',
+        title: 'allNews',
         link: '/news',
       }),
     },

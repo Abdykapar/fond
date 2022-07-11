@@ -2,13 +2,17 @@
   <div>
     <i-header />
     <i-breadcrumb>
-      <a-breadcrumb-item>Деятельность</a-breadcrumb-item>
-      <a-breadcrumb-item>Мероприятие</a-breadcrumb-item>
+      <a-breadcrumb-item>{{ $t('activity') }}</a-breadcrumb-item>
+      <a-breadcrumb-item>{{ $t('event') }}</a-breadcrumb-item>
       <a-breadcrumb-item>{{
         itemContent.title | truncate(100, '...')
       }}</a-breadcrumb-item>
     </i-breadcrumb>
-    <news-content :single-news="event" :all-btn-data="allBtnData" />
+    <news-content
+      :single-news="event"
+      other-title="allEvent"
+      :all-btn-data="allBtnData"
+    />
     <i-footer />
   </div>
 </template>
@@ -33,7 +37,7 @@ export default {
     },
     allBtnData() {
       return {
-        title: 'Все мероприятия',
+        title: 'allEvent',
         link: '/activity/event',
       }
     },

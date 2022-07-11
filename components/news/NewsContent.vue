@@ -36,12 +36,12 @@ export default {
     },
     otherTitle: {
       type: String,
-      default: 'Другие новости',
+      default: 'otherNews',
     },
     allBtnData: {
       type: Object,
       default: () => ({
-        title: 'Все Новости',
+        title: 'allNews',
         link: '/news',
       }),
     },

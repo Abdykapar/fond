@@ -5,19 +5,14 @@
         <div class="header__hover"></div>
         <div class="header">
           <router-link class="header__logo" to="/">
-            <img
-              src="/img/gerb.png"
-              alt="Администрация Президента Кыргызской Республики"
-            />
-            <span class="header__logo-title"
-              >Администрация Президента Кыргызской Республики</span
-            >
+            <img src="/img/gerb.png" :alt="$t('administration')" />
+            <span class="header__logo-title">{{ $t('administration') }}</span>
           </router-link>
 
           <div>
             <a-input-search
               v-model="search"
-              placeholder="Search"
+              :placeholder="$t('search')"
               class="header__input"
               style="width: 305px"
               @search="() => {}"
@@ -63,12 +58,12 @@
             </ul>
           </div>
           <div class="sub-header__logo">
-            <img src="/img/logo.png" alt="руханий маданиятты онуктуруу фонду" />
+            <img src="/img/logo.png" :alt="$t('fondDesc')" />
           </div>
           <div>
-            <a-button class="button primary" @click="isOpenModal = true"
-              >Пожертвовать</a-button
-            >
+            <a-button class="button primary" @click="isOpenModal = true">{{
+              $t('donate')
+            }}</a-button>
           </div>
         </div>
       </div>
@@ -114,8 +109,13 @@ export default {
       isOpenModal: false,
     }
   },
+  created() {
+    this.currentLang = this.$i18n.localeProperties.code || 'kg'
+  },
   methods: {
-    langChange() {},
+    langChange(val) {
+      this.$i18n.setLocale(val)
+    },
   },
 }
 </script>

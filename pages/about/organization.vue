@@ -3,10 +3,10 @@
     <main-layout>
       <i-breadcrumb>
         <a-breadcrumb-item>
-          <router-link to="/"> Главная</router-link>
+          <router-link to="/"> {{ $t('main') }}</router-link>
         </a-breadcrumb-item>
-        <a-breadcrumb-item>О ФРДК «Ыйман» </a-breadcrumb-item>
-        <a-breadcrumb-item>Организационная структура </a-breadcrumb-item>
+        <a-breadcrumb-item>{{ $t('aboutFond') }}</a-breadcrumb-item>
+        <a-breadcrumb-item>{{ $t('orgStructure') }}</a-breadcrumb-item>
       </i-breadcrumb>
 
       <div class="flex-center">

@@ -3,9 +3,9 @@
     <i-header />
     <i-breadcrumb>
       <a-breadcrumb-item>
-        <router-link to="/"> Главная </router-link>
+        <router-link to="/"> {{ $t('main') }} </router-link>
       </a-breadcrumb-item>
-      <a-breadcrumb-item>Новости</a-breadcrumb-item>
+      <a-breadcrumb-item>{{ $t('news') }}</a-breadcrumb-item>
       <a-breadcrumb-item>{{
         itemContent.title | truncate(100, '...')
       }}</a-breadcrumb-item>

@@ -3,9 +3,9 @@
     <main-layout>
       <i-breadcrumb>
         <a-breadcrumb-item>
-          <router-link to="/"> Главная </router-link>
+          <router-link to="/"> {{ $t('main') }} </router-link>
         </a-breadcrumb-item>
-        <a-breadcrumb-item>Благотворительность</a-breadcrumb-item>
+        <a-breadcrumb-item>{{ $t('charity') }}</a-breadcrumb-item>
       </i-breadcrumb>
 
       <div class="single__content container">

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="section-title">Галерея</h2>
+    <h2 class="section-title">{{ $t('gallery') }}</h2>
     <div class="gallery">
       <template v-for="(img, index) in filteredImages">
         <div

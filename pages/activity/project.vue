@@ -2,8 +2,8 @@
   <div>
     <main-layout>
       <i-breadcrumb>
-        <a-breadcrumb-item>Деятельность</a-breadcrumb-item>
-        <a-breadcrumb-item>Проектная деятельность </a-breadcrumb-item>
+        <a-breadcrumb-item>{{ $t('activity') }}</a-breadcrumb-item>
+        <a-breadcrumb-item>{{ $t('projectActivities') }}</a-breadcrumb-item>
       </i-breadcrumb>
 
       <div class="single__content container">

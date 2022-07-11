@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <h2 class="section-title">Ссылки</h2>
+    <h2 class="section-title">{{ $t('links') }}</h2>
     <div class="links-list">
       <i-card-2 v-for="item in links" :key="item.id" :item="item" />
     </div>
     <div class="section__show-all">
-      <router-link to="/links" class="section__show-all__btn"
-        >Все Ссылки</router-link
-      >
+      <router-link to="/links" class="section__show-all__btn">{{
+        $t('allLinks')
+      }}</router-link>
     </div>
   </div>
 </template>

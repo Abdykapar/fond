@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <h2 class="section-title">Галерея</h2>
+    <h2 class="section-title">{{ $t('gallery') }}</h2>
     <div class="image-list">
       <image-card v-for="item in filteredGallery" :key="item.id" :item="item" />
     </div>
     <div class="section__show-all">
-      <router-link to="/gallery" class="section__show-all__btn"
-        >Все Фотографии</router-link
-      >
+      <router-link to="/gallery" class="section__show-all__btn">{{
+        $t('allPhotos')
+      }}</router-link>
     </div>
   </div>
 </template>

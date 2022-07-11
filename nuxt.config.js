@@ -1,3 +1,5 @@
+import messages from './lang/messages'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -30,12 +32,25 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [['nuxt-leaflet', { attributionControl: false }], 'nuxt-svg-loader'],
+  modules: [
+    ['nuxt-leaflet', { attributionControl: false }],
+    'nuxt-svg-loader',
+    '@nuxtjs/i18n',
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
   axios: {
     baseURL: '165.227.147.217:8888/api', // Used as fallback if no runtime config is provided
+  },
+
+  i18n: {
+    locales: ['kg', 'ru', 'en'],
+    defaultLocale: 'kg',
+    vueI18n: {
+      fallbackLocale: 'kg',
+      messages,
+    },
   },
 }

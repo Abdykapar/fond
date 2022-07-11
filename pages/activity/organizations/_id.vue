@@ -2,8 +2,8 @@
   <div>
     <main-layout>
       <i-breadcrumb>
-        <a-breadcrumb-item>Деятельность</a-breadcrumb-item>
-        <a-breadcrumb-item>Международное сотрудничество</a-breadcrumb-item>
+        <a-breadcrumb-item>{{ $t('activity') }}</a-breadcrumb-item>
+        <a-breadcrumb-item>{{ $t('internationalCoop') }}</a-breadcrumb-item>
         <a-breadcrumb-item>{{ itemContent.title }}</a-breadcrumb-item>
       </i-breadcrumb>
 

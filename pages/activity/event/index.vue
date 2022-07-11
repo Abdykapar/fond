@@ -2,8 +2,8 @@
   <div>
     <i-header />
     <i-breadcrumb>
-      <a-breadcrumb-item>Деятельность</a-breadcrumb-item>
-      <a-breadcrumb-item>Мероприятие</a-breadcrumb-item>
+      <a-breadcrumb-item>{{ $t('activity') }}</a-breadcrumb-item>
+      <a-breadcrumb-item>{{ $t('event') }}</a-breadcrumb-item>
     </i-breadcrumb>
     <div class="grid container">
       <i-card

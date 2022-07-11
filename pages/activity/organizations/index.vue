@@ -2,12 +2,12 @@
   <div>
     <main-layout>
       <i-breadcrumb>
-        <a-breadcrumb-item>Деятельность</a-breadcrumb-item>
-        <a-breadcrumb-item>Международное сотрудничество</a-breadcrumb-item>
+        <a-breadcrumb-item>{{ $t('activity') }}</a-breadcrumb-item>
+        <a-breadcrumb-item>{{ $t('internationalCoop') }}</a-breadcrumb-item>
       </i-breadcrumb>
 
       <div class="org__content container">
-        <h2 class="section-title">Организации</h2>
+        <h2 class="section-title">{{ $t('orgs') }}</h2>
         <div class="logos">
           <router-link
             v-for="item in orgs"

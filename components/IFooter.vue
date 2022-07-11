@@ -1,14 +1,14 @@
 <template>
   <div>
     <div id="contacts" class="container">
-      <h2 class="section-title">Контакты</h2>
+      <h2 class="section-title">{{ $t('contacts') }}</h2>
       <div class="footer">
         <ul class="footer__contacts">
           <li>
             <a class="footer__tel" href="tel:+996 625130">Тел. +996 625130</a>
           </li>
           <li>Iymanfond@gmail.com</li>
-          <li>Кыргызская Республика, г.Бишкек, проспект Эркиндик, 56</li>
+          <li>{{ $t('address') }}</li>
         </ul>
         <div class="footer__map">
           <client-only>
@@ -29,7 +29,7 @@
     <footer>
       <div class="container">
         <div class="footer__body">
-          <span class="footer__t">Все права защишены</span>
+          <span class="footer__t">{{ $t('rights') }}</span>
           <ul class="social">
             <li>
               <a href="#" class="social__link">

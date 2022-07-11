@@ -3,25 +3,25 @@
     <main-layout>
       <i-breadcrumb>
         <a-breadcrumb-item>
-          <router-link to="/"> Главная</router-link>
+          <router-link to="/"> {{ $t('main') }}</router-link>
         </a-breadcrumb-item>
-        <a-breadcrumb-item>О ФРДК «Ыйман»</a-breadcrumb-item>
-        <a-breadcrumb-item>Председатель правления</a-breadcrumb-item>
+        <a-breadcrumb-item>{{ $t('aboutFond') }}</a-breadcrumb-item>
+        <a-breadcrumb-item>{{ $t('chairman') }}</a-breadcrumb-item>
       </i-breadcrumb>
 
       <img :src="single.image" class="page-avatar" />
 
-      <div class="page-content">
+      <div class="page-content min-height">
         {{ itemContent.content }}
       </div>
       <div>
-        <h2 class="section-title">Экс Главы ФРДК “Ыйман”</h2>
+        <h2 class="section-title">{{ $t('exChairman') }}</h2>
         <div class="chairmans">
           <div v-for="item in others" :key="item.id" class="chairman">
-            <img src="@/static/img/news.png" class="chairman__avatar" alt="" />
-            <p class="chairman__name">Александр Македонский</p>
+            <img :src="item.image" class="chairman__avatar" alt="" />
+            <p class="chairman__name">{{ getItem(item).name }}</p>
             <div class="chairman__date">
-              <span>2008-2013</span>
+              <span>{{ item.year_reign }}</span>
             </div>
           </div>
         </div>
@@ -46,11 +46,17 @@ export default {
       return this.chairmans[0] ? this.chairmans[0] : {}
     },
     others() {
-      return this.chairmans.slice(0) || []
+      return this.chairmans.slice(1) || []
     },
     itemContent() {
       if (!this.single.translations) return {}
       return this.single.translations[Object.keys(this.single.translations)[0]]
+    },
+  },
+  methods: {
+    getItem(item) {
+      if (!item.translations) return {}
+      return item.translations[Object.keys(item.translations)[0]]
     },
   },
 }
@@ -61,6 +67,9 @@ export default {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 30px;
+}
+.min-height {
+  height: 450px;
 }
 .chairman {
   text-align: center;

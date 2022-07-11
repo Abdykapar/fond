@@ -4,7 +4,7 @@
     <p class="donation__p">
       {{ itemContent.content }}
     </p>
-    <h2 class="donation__title">Реквизиты:</h2>
+    <h2 class="donation__title">{{ $t('requisites') }}:</h2>
     <ul class="donation__list">
       <li
         v-for="item in single.bank_details"
