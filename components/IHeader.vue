@@ -29,12 +29,9 @@
               style="width: 81px"
               @change="langChange"
             >
-              <a-select-option value="jack">Jack</a-select-option>
-              <a-select-option value="lucy">Lucy</a-select-option>
-              <a-select-option value="disabled" disabled
-                >Disabled</a-select-option
-              >
-              <a-select-option value="Yiminghe">yiminghe</a-select-option>
+              <a-select-option value="kg">Кыр</a-select-option>
+              <a-select-option value="ru">Рус</a-select-option>
+              <a-select-option value="en">Eng</a-select-option>
             </a-select>
           </div>
         </div>
@@ -69,7 +66,9 @@
             <img src="/img/logo.png" alt="руханий маданиятты онуктуруу фонду" />
           </div>
           <div>
-            <a-button class="button primary">Пожертвовать</a-button>
+            <a-button class="button primary" @click="isOpenModal = true"
+              >Пожертвовать</a-button
+            >
           </div>
         </div>
       </div>
@@ -95,18 +94,24 @@
         </li>
       </ul>
     </div>
+    <a-modal v-model="isOpenModal" title="" :footer="null" :width="1108">
+      <i-donation />
+    </a-modal>
   </div>
 </template>
 
 <script>
+import IDonation from './IDonation.vue'
 import { menus } from '@/static/data'
 export default {
   name: 'IHeader',
+  components: { IDonation },
   data() {
     return {
-      currentLang: 'Eng',
+      currentLang: 'kg',
       menus,
       search: '',
+      isOpenModal: false,
     }
   },
   methods: {

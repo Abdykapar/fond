@@ -10,7 +10,7 @@
         itemContent.title | truncate(100, '...')
       }}</a-breadcrumb-item>
     </i-breadcrumb>
-    <news-content />
+    <news-content :news="news" :single-news="singleNews" />
     <i-footer />
   </div>
 </template>
@@ -29,7 +29,7 @@ export default {
     await store.dispatch('fetchNews')
   },
   computed: {
-    ...mapState(['singleNews']),
+    ...mapState(['singleNews', 'news']),
     itemContent() {
       if (!this.singleNews.translations) return {}
       return this.singleNews.translations[

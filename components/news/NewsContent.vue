@@ -13,12 +13,11 @@
       </div>
     </div>
     <news-gallery :images="singleNews.gallery" />
-    <news-list title="Другие новости" />
+    <news-list :all-btn-data="allBtnData" :news="news" :title="otherTitle" />
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import moment from 'moment'
 import NewsGallery from '../NewsGallery.vue'
 import NewsList from '../NewsList.vue'
@@ -26,8 +25,28 @@ import NewsList from '../NewsList.vue'
 export default {
   name: 'NewsContent',
   components: { NewsGallery, NewsList },
+  props: {
+    news: {
+      type: Array,
+      default: () => [],
+    },
+    singleNews: {
+      type: Object,
+      default: () => ({}),
+    },
+    otherTitle: {
+      type: String,
+      default: 'Другие новости',
+    },
+    allBtnData: {
+      type: Object,
+      default: () => ({
+        title: 'Все Новости',
+        link: '/news',
+      }),
+    },
+  },
   computed: {
-    ...mapState(['singleNews']),
     itemContent() {
       if (!this.singleNews.translations) return {}
       return this.singleNews.translations[

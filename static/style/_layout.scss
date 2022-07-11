@@ -80,8 +80,13 @@ body {
   row-gap: 15px;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
 .page-img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .page-content {

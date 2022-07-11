@@ -8,7 +8,7 @@
         itemContent.title | truncate(100, '...')
       }}</a-breadcrumb-item>
     </i-breadcrumb>
-    <news-content />
+    <news-content :single-news="event" :all-btn-data="allBtnData" />
     <i-footer />
   </div>
 </template>
@@ -23,16 +23,19 @@ export default {
   name: 'ActivitySingleEvent',
   components: { IHeader, IFooter, IBreadcrumb, NewsContent },
   async asyncData({ store, params }) {
-    await store.dispatch('fetchSingleNews', params.id)
-    await store.dispatch('fetchNews')
+    await store.dispatch('fetchActivityEvent', params.id)
   },
   computed: {
-    ...mapState(['singleNews']),
+    ...mapState(['event']),
     itemContent() {
-      if (!this.singleNews.translations) return {}
-      return this.singleNews.translations[
-        Object.keys(this.singleNews.translations)[0]
-      ]
+      if (!this.event.translations) return {}
+      return this.event.translations[Object.keys(this.event.translations)[0]]
+    },
+    allBtnData() {
+      return {
+        title: 'Все мероприятия',
+        link: '/activity/event',
+      }
     },
   },
 }

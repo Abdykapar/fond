@@ -2,7 +2,7 @@
   <div class="i-card">
     <img class="i-card__img" :src="item.image" alt="" />
     <div class="i-card__content">
-      <router-link :to="`/news/${item.id}`">
+      <router-link :to="`${getLink}${item.id}`">
         <h3 class="i-card__title">
           {{ itemContent.title }}
         </h3>
@@ -33,11 +33,18 @@ export default {
       type: Object,
       default: () => ({}),
     },
+    link: {
+      type: String,
+      default: '',
+    },
   },
   computed: {
     itemContent() {
       if (!this.item.translations) return {}
       return this.item.translations[Object.keys(this.item.translations)[0]]
+    },
+    getLink() {
+      return this.link ? this.link : '/news/'
     },
   },
   methods: {

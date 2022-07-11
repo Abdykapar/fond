@@ -6,13 +6,19 @@
         <a-breadcrumb-item>Международное сотрудничество</a-breadcrumb-item>
       </i-breadcrumb>
 
-      <div class="org__content">
+      <div class="org__content container">
         <h2 class="section-title">Организации</h2>
         <div class="logos">
-          <div v-for="item in 8" :key="item" class="logo">
-            <img src="@/static/img/news.png" class="logo__img" />
-            <h3 class="logo__title">Название Организации</h3>
-          </div>
+          <router-link
+            v-for="item in orgs"
+            :key="item.id"
+            :to="`/activity/organizations/${item.id}`"
+          >
+            <div class="logo">
+              <img :src="item.image" class="logo__img" />
+              <h3 class="logo__title">{{ getContent(item) }}</h3>
+            </div>
+          </router-link>
         </div>
       </div>
     </main-layout>
@@ -20,11 +26,26 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import MainLayout from '@/layouts/MainLayout.vue'
 import IBreadcrumb from '@/components/IBreadcrumb.vue'
 export default {
   name: 'IOrganizations',
   components: { MainLayout, IBreadcrumb },
+  async asyncData({ store }) {
+    await store.dispatch('fetchActivityOrgs')
+  },
+  computed: {
+    ...mapState(['orgs']),
+  },
+  methods: {
+    getContent(item) {
+      if (!item.translations) return ''
+      return item.translations[Object.keys(item.translations)[0]]
+        ? item.translations[Object.keys(item.translations)[0]].title
+        : ''
+    },
+  },
 }
 </script>
 

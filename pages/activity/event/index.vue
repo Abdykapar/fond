@@ -6,14 +6,19 @@
       <a-breadcrumb-item>Мероприятие</a-breadcrumb-item>
     </i-breadcrumb>
     <div class="grid container">
-      <i-card v-for="item in news" :key="item.id" :item="item" />
+      <i-card
+        v-for="item in events"
+        :key="item.id"
+        link="/activity/event/"
+        :item="item"
+      />
     </div>
     <i-footer />
   </div>
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapState } from 'vuex'
 import IBreadcrumb from '@/components/IBreadcrumb.vue'
 import ICard from '@/components/ICard.vue'
 import IFooter from '@/components/IFooter.vue'
@@ -22,16 +27,17 @@ export default {
   name: 'ActivityEvent',
   components: { IHeader, IBreadcrumb, IFooter, ICard },
   async asyncData({ store }) {
-    await store.dispatch('fetchNews')
-  },
-  // created() {
-  //   this.fetchNews()
-  // },
-  methods: {
-    ...mapActions(['fetchNews']),
+    await store.dispatch('fetchActivityEvents')
   },
   computed: {
-    ...mapState(['news']),
+    ...mapState(['events']),
+    single() {
+      return this.events[0] || {}
+    },
+    itemContent() {
+      if (!this.single.translations) return {}
+      return this.single.translations[Object.keys(this.single.translations)[0]]
+    },
   },
 }
 </script>

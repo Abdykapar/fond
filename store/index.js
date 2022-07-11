@@ -7,6 +7,9 @@ const newsPrefix = '/news'
 const linksPrefix = '/links'
 const galleryPrefix = '/gallery'
 const activityPrefix = '/activity'
+const frdkPrefix = '/frdk'
+const charityPrefix = '/charity'
+const donationPrefix = '/donate'
 
 export const state = () => ({
   gallery: [],
@@ -22,6 +25,13 @@ export const state = () => ({
   org: {},
   projects: [],
   project: {},
+  chairmans: [],
+  chairman: {},
+  histories: [],
+  history: {},
+  charity: {},
+  donations: [],
+  donation: {},
 })
 
 export const actions = {
@@ -117,7 +127,7 @@ export const actions = {
   },
   fetchActivityProjects({ commit }) {
     return axios
-      .get(`${activityPrefix}/activity/project-activity//`)
+      .get(`${activityPrefix}/project-activity/`)
       .then((res) => {
         commit('SET_PROJECTS', res.data)
       })
@@ -127,9 +137,79 @@ export const actions = {
   },
   fetchActivityProject({ commit }, id) {
     return axios
-      .get(`${activityPrefix}//activity/project-activity/${id}`)
+      .get(`${activityPrefix}/project-activity/${id}`)
       .then((res) => {
         commit('SET_PROJECT', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  fetchFrdkChairmans({ commit }) {
+    return axios
+      .get(`${frdkPrefix}/chairman-of-the-board/`)
+      .then((res) => {
+        commit('SET_CHAIRMANS', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  fetchFrdkChairman({ commit }, id) {
+    return axios
+      .get(`${frdkPrefix}/chairman-of-the-board/${id}`)
+      .then((res) => {
+        commit('SET_CHAIRMAN', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  fetchFrdkHistories({ commit }) {
+    return axios
+      .get(`${frdkPrefix}/history-of-creation/`)
+      .then((res) => {
+        commit('SET_HISTORIES', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  fetchFrdkHistory({ commit }, id) {
+    return axios
+      .get(`${frdkPrefix}/history-of-creation/${id}`)
+      .then((res) => {
+        commit('SET_HISTORY', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  fetchCharity({ commit }) {
+    return axios
+      .get(`${charityPrefix}`)
+      .then((res) => {
+        commit('SET_CHARITY', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  fetchDonations({ commit }) {
+    return axios
+      .get(`${donationPrefix}/`)
+      .then((res) => {
+        commit('SET_DONATIONS', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  fetchDonation({ commit }, id) {
+    return axios
+      .get(`${donationPrefix}/${id}`)
+      .then((res) => {
+        commit('SET_DONATION', res.data)
       })
       .catch((err) => {
         console.log(err)
@@ -150,11 +230,32 @@ export const mutations = {
   SET_NEWS(state, data) {
     state.news = data
   },
+  SET_CHARITY(state, data) {
+    state.charity = data
+  },
   SET_EVENTS(state, data) {
     state.events = data
   },
   SET_EVENT(state, data) {
     state.event = data
+  },
+  SET_DONATIONS(state, data) {
+    state.donations = data
+  },
+  SET_DONATION(state, data) {
+    state.donation = data
+  },
+  SET_CHAIRMANS(state, data) {
+    state.chairmans = data
+  },
+  SET_CHAIRMAN(state, data) {
+    state.chairman = data
+  },
+  SET_HISTORIES(state, data) {
+    state.histories = data
+  },
+  SET_HISTORY(state, data) {
+    state.history = data
   },
   SET_ORGS(state, data) {
     state.orgs = data

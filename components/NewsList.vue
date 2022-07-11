@@ -5,9 +5,9 @@
       <i-card v-for="item in news" :key="item.id" :item="item" />
     </div>
     <div class="section__show-all">
-      <router-link to="/news" class="section__show-all__btn"
-        >Все Новости</router-link
-      >
+      <router-link :to="allBtnData.link" class="section__show-all__btn">{{
+        allBtnData.title
+      }}</router-link>
     </div>
   </div>
 </template>
@@ -22,6 +22,13 @@ export default {
     title: {
       type: String,
       default: 'Новости',
+    },
+    allBtnData: {
+      type: Object,
+      default: () => ({
+        title: 'Все Новости',
+        link: '/news',
+      }),
     },
   },
   computed: {
