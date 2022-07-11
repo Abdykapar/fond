@@ -4,10 +4,10 @@
       <div class="container container--big">
         <div class="header__hover"></div>
         <div class="header">
-          <router-link class="header__logo" to="/">
+          <div class="header__logo">
             <img src="/img/gerb.png" :alt="$t('administration')" />
             <span class="header__logo-title">{{ $t('administration') }}</span>
-          </router-link>
+          </div>
 
           <div>
             <a-input-search
@@ -58,7 +58,9 @@
             </ul>
           </div>
           <div class="sub-header__logo">
-            <img src="/img/logo.png" :alt="$t('fondDesc')" />
+            <router-link to="/">
+              <img src="/img/logo.png" :alt="$t('fondDesc')" />
+            </router-link>
           </div>
           <div>
             <a-button class="button primary" @click="isOpenModal = true">{{
