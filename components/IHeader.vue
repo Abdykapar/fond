@@ -24,7 +24,7 @@
               style="width: 81px"
               @change="langChange"
             >
-              <a-select-option value="kg">Кыр</a-select-option>
+              <a-select-option value="ky">Кыр</a-select-option>
               <a-select-option value="ru">Рус</a-select-option>
               <a-select-option value="en">Eng</a-select-option>
             </a-select>
@@ -105,18 +105,31 @@ export default {
   components: { IDonation },
   data() {
     return {
-      currentLang: 'kg',
+      currentLang: 'ky',
       menus,
       search: '',
       isOpenModal: false,
+      isHideTop: false,
     }
   },
   created() {
-    this.currentLang = this.$i18n.localeProperties.code || 'kg'
+    this.currentLang = this.$i18n.localeProperties.code || 'ky'
+  },
+  mounted() {
+    document.addEventListener('scroll', this.onScroll)
+    this.isHideTop = document.documentElement.scrollTop >= 115
+  },
+  beforeDestroy() {
+    document.addEventListener('scroll', this.onScroll)
   },
   methods: {
     langChange(val) {
       this.$i18n.setLocale(val)
+    },
+    onScroll(event) {
+      if (event.target.scrollingElement.scrollTop >= 115) {
+        this.isHideTop = true
+      } else this.isHideTop = false
     },
   },
 }

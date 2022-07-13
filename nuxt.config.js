@@ -46,10 +46,10 @@ export default {
   },
 
   i18n: {
-    locales: ['kg', 'ru', 'en'],
-    defaultLocale: 'kg',
+    locales: ['ky', 'ru', 'en'],
+    defaultLocale: 'ky',
     vueI18n: {
-      fallbackLocale: 'kg',
+      fallbackLocale: 'ky',
       messages,
     },
   },

@@ -32,7 +32,7 @@ export default {
     ...mapState(['org']),
     itemContent() {
       if (!this.org.translations) return {}
-      return this.org.translations[Object.keys(this.org.translations)[0]]
+      return this.org.translations[this.$i18n.localeProperties.code] || {}
     },
   },
 }

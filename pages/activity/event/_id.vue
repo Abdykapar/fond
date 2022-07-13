@@ -33,7 +33,7 @@ export default {
     ...mapState(['event']),
     itemContent() {
       if (!this.event.translations) return {}
-      return this.event.translations[Object.keys(this.event.translations)[0]]
+      return this.event.translations[this.$i18n.localeProperties.code] || {}
     },
     allBtnData() {
       return {

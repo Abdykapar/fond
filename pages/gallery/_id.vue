@@ -46,9 +46,9 @@ export default {
     ...mapState(['singleGallery']),
     itemContent() {
       if (!this.singleGallery.translations) return {}
-      return this.singleGallery.translations[
-        Object.keys(this.singleGallery.translations)[0]
-      ]
+      return (
+        this.singleGallery.translations[this.$i18n.localeProperties.code] || {}
+      )
     },
   },
 }

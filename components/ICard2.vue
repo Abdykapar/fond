@@ -21,7 +21,7 @@ export default {
   computed: {
     itemContent() {
       if (!this.item.translations) return {}
-      return this.item.translations[Object.keys(this.item.translations)[0]]
+      return this.item.translations[this.$i18n.localeProperties.code] || {}
     },
   },
 }

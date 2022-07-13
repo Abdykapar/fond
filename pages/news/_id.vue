@@ -32,9 +32,9 @@ export default {
     ...mapState(['singleNews', 'news']),
     itemContent() {
       if (!this.singleNews.translations) return {}
-      return this.singleNews.translations[
-        Object.keys(this.singleNews.translations)[0]
-      ]
+      return (
+        this.singleNews.translations[this.$i18n.localeProperties.code] || {}
+      )
     },
   },
 }

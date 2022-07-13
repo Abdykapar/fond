@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapState } from 'vuex'
 import IBreadcrumb from '@/components/IBreadcrumb.vue'
 import IFooter from '@/components/IFooter.vue'
 import IHeader from '@/components/IHeader.vue'
@@ -25,12 +25,6 @@ export default {
   components: { IHeader, IBreadcrumb, IFooter, ImageCard },
   async asyncData({ store }) {
     await store.dispatch('fetchGallery')
-  },
-  // created() {
-  //   this.fetchGallery()
-  // },
-  methods: {
-    ...mapActions(['fetchGallery']),
   },
   computed: {
     ...mapState(['gallery']),

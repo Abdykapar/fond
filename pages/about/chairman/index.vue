@@ -56,13 +56,13 @@ export default {
     },
     itemContent() {
       if (!this.single.translations) return {}
-      return this.single.translations[Object.keys(this.single.translations)[0]]
+      return this.single.translations[this.$i18n.localeProperties.code] || {}
     },
   },
   methods: {
     getItem(item) {
       if (!item.translations) return {}
-      return item.translations[Object.keys(item.translations)[0]]
+      return item.translations[this.$i18n.localeProperties.code] || {}
     },
   },
 }

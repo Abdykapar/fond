@@ -41,8 +41,8 @@ export default {
   methods: {
     getContent(item) {
       if (!item.translations) return ''
-      return item.translations[Object.keys(item.translations)[0]]
-        ? item.translations[Object.keys(item.translations)[0]].title
+      return item.translations[this.$i18n.localeProperties.code]
+        ? item.translations[this.$i18n.localeProperties.code].title
         : ''
     },
   },

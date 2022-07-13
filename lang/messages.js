@@ -29,10 +29,10 @@ export default {
     projectActivities: 'Проектная деятельность',
     charity: 'Благотворительность',
   },
-  kg: {
+  ky: {
     search: 'Издоо',
     otherNews: 'Другие новости',
-    allNews: 'All news',
+    allNews: 'Все новости',
     requisites: 'Реквизиты',
     contacts: 'Контакты',
     address: 'Кыргызская Республика, г.Бишкек, проспект Эркиндик, 56',
@@ -62,7 +62,7 @@ export default {
   ru: {
     search: 'Поиск',
     otherNews: 'Другие новости',
-    allNews: 'All news',
+    allNews: 'Все новости',
     requisites: 'Реквизиты',
     contacts: 'Контакты',
     address: 'Кыргызская Республика, г.Бишкек, проспект Эркиндик, 56',

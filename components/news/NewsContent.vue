@@ -48,10 +48,11 @@ export default {
   },
   computed: {
     itemContent() {
-      if (!this.singleNews.translations) return {}
-      return this.singleNews.translations[
-        Object.keys(this.singleNews.translations)[0]
-      ]
+      if (!this.singleNews.translations || !this.$i18n.localeProperties.code)
+        return {}
+      return (
+        this.singleNews.translations[this.$i18n.localeProperties.code] || {}
+      )
     },
     format() {
       return moment(this.singleNews.updated_at).format('DD/MM/YYYY')

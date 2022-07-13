@@ -6,7 +6,7 @@
     </div>
     <div class="section__show-all">
       <router-link :to="allBtnData.link" class="section__show-all__btn">{{
-        allBtnData.title
+        $t(allBtnData.title)
       }}</router-link>
     </div>
   </div>

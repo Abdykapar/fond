@@ -19,15 +19,6 @@
 import moment from 'moment'
 export default {
   name: 'ICard',
-  filters: {
-    truncate(text, length, suffix) {
-      if (text.length > length) {
-        return text.substring(0, length) + suffix
-      } else {
-        return text
-      }
-    },
-  },
   props: {
     item: {
       type: Object,
@@ -41,7 +32,7 @@ export default {
   computed: {
     itemContent() {
       if (!this.item.translations) return {}
-      return this.item.translations[Object.keys(this.item.translations)[0]]
+      return this.item.translations[this.$i18n.localeProperties.code] || {}
     },
     getLink() {
       return this.link ? this.link : '/news/'

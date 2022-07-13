@@ -43,7 +43,7 @@ export default {
   computed: {
     itemContent() {
       if (!this.item.translations) return {}
-      return this.item.translations[Object.keys(this.item.translations)[0]]
+      return this.item.translations[this.$i18n.localeProperties.code] || {}
     },
   },
 }
@@ -58,6 +58,11 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  transition: all 300ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.025);
+  }
 
   &__content {
     height: 257px;

@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapState } from 'vuex'
 import IBreadcrumb from '../../components/IBreadcrumb.vue'
 import ICard from '../../components/ICard.vue'
 import IFooter from '../../components/IFooter.vue'
@@ -25,12 +25,6 @@ export default {
   components: { IHeader, IBreadcrumb, IFooter, ICard },
   async asyncData({ store }) {
     await store.dispatch('fetchNews')
-  },
-  // created() {
-  //   this.fetchNews()
-  // },
-  methods: {
-    ...mapActions(['fetchNews']),
   },
   computed: {
     ...mapState(['news']),
