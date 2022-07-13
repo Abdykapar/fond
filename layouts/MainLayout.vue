@@ -1,7 +1,7 @@
 <template>
   <div>
     <IHeader />
-    <div class="container">
+    <div class="container mt">
       <slot />
     </div>
     <IFooter />
@@ -14,4 +14,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.mt {
+  /* padding-top: 282px; */
+}
+</style>
