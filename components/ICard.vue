@@ -1,6 +1,8 @@
 <template>
   <div class="i-card">
-    <img class="i-card__img" :src="item.image" alt="" />
+    <div class="i-card__img-wrapper">
+      <img class="i-card__img" :src="item.image" alt="" />
+    </div>
     <div class="i-card__content">
       <router-link :to="`${getLink}${item.id}`">
         <h3 class="i-card__title">
