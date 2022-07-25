@@ -5,12 +5,15 @@
       <div class="footer">
         <ul class="footer__contacts">
           <li>
-            <span class="footer__tel">Тел.</span>
+            <span class="footer__tel">Тел.</span><br />
             <a class="footer__tel" href="tel:+996312625130"
-              >+996 312 62 51 30,</a
-            >
+              >+996 312 62 51 30<br
+            /></a>
             <a class="footer__tel" href="tel:+996312624636"
-              >+996 312 62 46 36</a
+              >+996 312 62 46 36<br
+            /></a>
+            <a class="footer__tel" href="tel:+996312625130"
+              >+996 312 62 51 30</a
             >
           </li>
           <li>iyman.kg.22@gmail.com</li>

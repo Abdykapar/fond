@@ -10,7 +10,7 @@ const activityPrefix = '/activity'
 const frdkPrefix = '/frdk'
 const charityPrefix = '/charity'
 const donationPrefix = '/donate'
-const frdkAboutPrefix = '/about-us'
+const frdkAboutPrefix = 'about-us/'
 
 export const state = () => ({
   gallery: [],
