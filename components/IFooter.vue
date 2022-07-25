@@ -13,7 +13,11 @@
               >+996 312 62 46 36<br
             /></a>
           </li>
-          <li>iyman.kg.22@gmail.com</li>
+          <li>
+            <a class="footer__mail" href="mailto:iyman.kg.22@gmail.com"
+              >iyman.kg.22@gmail.com</a
+            >
+          </li>
           <li v-html="$t('address')" />
         </ul>
         <div class="footer__map">
