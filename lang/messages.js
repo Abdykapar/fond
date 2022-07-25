@@ -30,6 +30,7 @@ export default {
     projectActivities: 'Проектная деятельность',
     charity: 'Благотворительность',
     aboutFrdk: 'О ФРДК «Ыйман»',
+    title: 'Ыйман - руханий маданиятты онуктуруу фонду',
   },
   ky: {
     search: 'Издоо',
@@ -62,6 +63,7 @@ export default {
     projectActivities: 'Проектная деятельность',
     charity: 'Благотворительность',
     aboutFrdk: 'О ФРДК «Ыйман»',
+    title: 'Ыйман - руханий маданиятты онуктуруу фонду',
   },
   ru: {
     search: 'Поиск',
@@ -94,5 +96,6 @@ export default {
     projectActivities: 'Проектная деятельность',
     charity: 'Благотворительность',
     aboutFrdk: 'О ФРДК «Ыйман»',
+    title: 'Ыйман - руханий маданиятты онуктуруу фонду',
   },
 }

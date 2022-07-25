@@ -1,6 +1,6 @@
 <template>
   <div class="i-card2">
-    <a :href="item.link" class="size-2 primary-color">
+    <a :href="item.link" target="_blank" class="size-2 primary-color">
       {{ item.link }}
     </a>
     <p class="size-3 gray-color">
