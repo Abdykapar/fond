@@ -5,22 +5,32 @@
       <div class="footer">
         <ul class="footer__contacts">
           <li>
-            <a class="footer__tel" href="tel:+996 625130">Тел. +996 625130</a>
+            <span class="footer__tel">Тел.</span>
+            <a class="footer__tel" href="tel:+996312625130"
+              >+996 312 62 51 30,</a
+            >
+            <a class="footer__tel" href="tel:+996312624636"
+              >+996 312 62 46 36</a
+            >
           </li>
-          <li>Iymanfond@gmail.com</li>
-          <li>{{ $t('address') }}</li>
+          <li>iyman.kg.22@gmail.com</li>
+          <li v-html="$t('address')" />
         </ul>
         <div class="footer__map">
           <client-only>
             <l-map
               :options="{ attributionControl: false }"
-              :zoom="13"
-              :center="[55.9464418, 8.1277591]"
+              :zoom="16"
+              :center="[42.880172, 74.606403]"
             >
               <l-tile-layer
                 url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
               ></l-tile-layer>
-              <l-marker :lat-lng="[55.9464418, 8.1277591]"></l-marker>
+              <l-marker :lat-lng="[42.880172, 74.606403]">
+                <l-popup>
+                  <div>Iyman Foundation</div>
+                </l-popup>
+              </l-marker>
             </l-map>
           </client-only>
         </div>

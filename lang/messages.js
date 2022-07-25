@@ -5,7 +5,8 @@ export default {
     allNews: 'All news',
     requisites: 'Реквизиты',
     contacts: 'Contacts',
-    address: 'Кыргызская Республика, г.Бишкек, проспект Эркиндик, 56',
+    address:
+      '“Iyman” Foundation for the Development of Spiritual Culture under the Administration of the President of the Kyrgyz Republic <br/> Erkindik blvd. 56 <br/> 720040 Bishkek city <br/> Kyrgyz Republic',
     rights: 'Все права защишены',
     administration: 'Администрация Президента Кыргызской Республики',
     fondDesc: 'руханий маданиятты онуктуруу фонду',
@@ -36,7 +37,8 @@ export default {
     allNews: 'Все новости',
     requisites: 'Реквизиты',
     contacts: 'Контакты',
-    address: 'Кыргызская Республика, г.Бишкек, проспект Эркиндик, 56',
+    address:
+      'Кыргыз Республикасынын Администрациясынын алдындагы «Ыйман» диний маданиятты өнүктүрүү фонду» <br/> Эркиндик бул., 56 <br/> 720040 Бишкек шаары <br/> Кыргыз Республикасы',
     rights: 'Все права защишены',
     administration: 'Администрация Президента Кыргызской Республики',
     fondDesc: 'руханий маданиятты онуктуруу фонду',
@@ -67,7 +69,8 @@ export default {
     allNews: 'Все новости',
     requisites: 'Реквизиты',
     contacts: 'Контакты',
-    address: 'Кыргызская Республика, г.Бишкек, проспект Эркиндик, 56',
+    address:
+      '«Фонд развития духовной культуры «Ыйман» при Администрации Президента Кыргызской Республики <br/> бул. Эркиндик, 56 <br/> 720040 г. Бишкек <br/> Кыргызская Республика',
     rights: 'Все права защишены',
     administration: 'Администрация Президента Кыргызской Республики',
     fondDesc: 'руханий маданиятты онуктуруу фонду',
