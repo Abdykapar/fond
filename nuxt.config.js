@@ -3,7 +3,7 @@ import messages from './lang/messages'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'iyman-fond',
+    title: 'Ыйман - руханий маданиятты онуктуруу фонду',
     htmlAttrs: {
       lang: 'en',
     },
