@@ -12,9 +12,6 @@
             <a class="footer__tel" href="tel:+996312624636"
               >+996 312 62 46 36<br
             /></a>
-            <a class="footer__tel" href="tel:+996312625130"
-              >+996 312 62 51 30</a
-            >
           </li>
           <li>iyman.kg.22@gmail.com</li>
           <li v-html="$t('address')" />
