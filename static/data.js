@@ -30,6 +30,11 @@ export const menus = [
     code: 'frdk',
     children: [
       {
+        title: 'О ФРДК «Ыйман»',
+        code: 'about_frdk',
+        link: '/about/about-us',
+      },
+      {
         title: 'Организационная структура',
         code: 'frdk_org',
         link: '/about/organization',

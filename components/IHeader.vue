@@ -73,7 +73,7 @@
     <div class="container">
       <ul class="menu">
         <li v-for="menu in menus" :key="menu.code" class="menu__item">
-          <a-select v-if="menu.children" class="menu__list" :value="menu.title">
+          <!-- <a-select v-if="menu.children" class="menu__list" :value="menu.title">
             <a-select-option
               v-for="child in menu.children"
               :key="child.code"
@@ -85,6 +85,37 @@
               </router-link>
             </a-select-option>
           </a-select>
+          <router-link v-else class="menu__link" :to="menu.link">{{
+            menu.title
+          }}</router-link> -->
+
+          <a-dropdown v-if="menu.children" v-model="menu.isShow">
+            <a class="menu__link" @click.prevent>
+              {{ menu.title }}
+
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.172 6.99999L0.222 2.04999L1.636 0.635986L8 6.99999L1.636 13.364L0.222 11.95L5.172 6.99999Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+            <template #overlay>
+              <a-menu @click="() => (menu.isShow = false)">
+                <a-menu-item v-for="child in menu.children" :key="child.code">
+                  <router-link class="menu__link" :to="child.link">
+                    {{ child.title }}
+                  </router-link>
+                </a-menu-item>
+              </a-menu>
+            </template>
+          </a-dropdown>
           <router-link v-else class="menu__link" :to="menu.link">{{
             menu.title
           }}</router-link>
@@ -175,22 +206,33 @@
       <div class="container">
         <ul class="menu">
           <li v-for="menu in menus" :key="menu.code" class="menu__item">
-            <a-select
-              v-if="menu.children"
-              class="menu__list"
-              :value="menu.title"
-            >
-              <a-select-option
-                v-for="child in menu.children"
-                :key="child.code"
-                :value="child.title"
-                :title="child.title"
-              >
-                <router-link class="menu__link" :to="child.link">
-                  {{ child.title }}
-                </router-link>
-              </a-select-option>
-            </a-select>
+            <a-dropdown v-if="menu.children" v-model="menu.show">
+              <a class="menu__link" @click.prevent>
+                {{ menu.title }}
+
+                <svg
+                  width="8"
+                  height="14"
+                  viewBox="0 0 8 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.172 6.99999L0.222 2.04999L1.636 0.635986L8 6.99999L1.636 13.364L0.222 11.95L5.172 6.99999Z"
+                    fill="black"
+                  />
+                </svg>
+              </a>
+              <template #overlay>
+                <a-menu @click="() => (menu.show = false)">
+                  <a-menu-item v-for="child in menu.children" :key="child.code">
+                    <router-link class="menu__link" :to="child.link">
+                      {{ child.title }}
+                    </router-link>
+                  </a-menu-item>
+                </a-menu>
+              </template>
+            </a-dropdown>
             <router-link v-else class="menu__link" :to="menu.link">{{
               menu.title
             }}</router-link>
@@ -221,6 +263,7 @@ export default {
       isOpenModal: false,
       isHideTop: false,
       isShowSearch: false,
+      visible: false,
     }
   },
   created() {

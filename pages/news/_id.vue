@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 import IBreadcrumb from '@/components/IBreadcrumb.vue'
 import IFooter from '@/components/IFooter.vue'
 import IHeader from '@/components/IHeader.vue'
@@ -27,6 +27,12 @@ export default {
   async asyncData({ store, params }) {
     await store.dispatch('fetchSingleNews', params.id)
     await store.dispatch('fetchNews')
+  },
+  created() {
+    this.fetchSingleNews(this.$route.params.id)
+  },
+  methods: {
+    ...mapActions(['fetchSingleNews']),
   },
   computed: {
     ...mapState(['singleNews', 'news']),

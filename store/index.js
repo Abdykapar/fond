@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://165.227.147.217:8888/api'
+axios.defaults.baseURL = 'http://api.iyman.kg/api'
 axios.defaults.headers.common.Accept = 'application/json'
 
 const newsPrefix = '/news'
@@ -10,6 +10,7 @@ const activityPrefix = '/activity'
 const frdkPrefix = '/frdk'
 const charityPrefix = '/charity'
 const donationPrefix = '/donate'
+const frdkAboutPrefix = '/about-us'
 
 export const state = () => ({
   gallery: [],
@@ -32,6 +33,7 @@ export const state = () => ({
   charity: {},
   donations: [],
   donation: {},
+  frdk: [],
 })
 
 export const actions = {
@@ -165,6 +167,16 @@ export const actions = {
         console.log(err)
       })
   },
+  fetchFrdk({ commit }) {
+    return axios
+      .get(`${frdkPrefix}/${frdkAboutPrefix}`)
+      .then((res) => {
+        commit('SET_FRDK', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
   fetchFrdkHistories({ commit }) {
     return axios
       .get(`${frdkPrefix}/history-of-creation/`)
@@ -226,6 +238,9 @@ export const mutations = {
   },
   SET_LINKS(state, data) {
     state.links = data
+  },
+  SET_FRDK(state, data) {
+    state.frdk = data
   },
   SET_NEWS(state, data) {
     state.news = data

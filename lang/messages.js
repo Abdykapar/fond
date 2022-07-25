@@ -28,6 +28,7 @@ export default {
     orgs: 'Организации',
     projectActivities: 'Проектная деятельность',
     charity: 'Благотворительность',
+    aboutFrdk: 'О ФРДК «Ыйман»',
   },
   ky: {
     search: 'Издоо',
@@ -58,6 +59,7 @@ export default {
     orgs: 'Организации',
     projectActivities: 'Проектная деятельность',
     charity: 'Благотворительность',
+    aboutFrdk: 'О ФРДК «Ыйман»',
   },
   ru: {
     search: 'Поиск',
@@ -88,5 +90,6 @@ export default {
     orgs: 'Организации',
     projectActivities: 'Проектная деятельность',
     charity: 'Благотворительность',
+    aboutFrdk: 'О ФРДК «Ыйман»',
   },
 }
