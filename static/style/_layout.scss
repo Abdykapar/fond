@@ -53,6 +53,10 @@ body {
   line-height: 40px;
   color: $blue;
   margin: 34px 0 36px;
+
+  &--white {
+    color: $white;
+  }
 }
 
 .primary-color {
@@ -87,6 +91,7 @@ body {
 
 .page-img {
   max-width: 100%;
+  max-height: 408px;
 }
 
 .page-content {

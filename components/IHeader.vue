@@ -22,6 +22,7 @@
               v-model="currentLang"
               class="header__lang"
               style="width: 81px"
+              :show-arrow="false"
               @change="langChange"
             >
               <a-select-option value="ky">Кыр</a-select-option>
@@ -190,6 +191,7 @@
                 v-model="currentLang"
                 class="header__lang"
                 style="width: 81px"
+                :show-arrow="false"
                 @change="langChange"
               >
                 <a-select-option value="ky">Кыр</a-select-option>

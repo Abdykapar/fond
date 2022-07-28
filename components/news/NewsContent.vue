@@ -5,7 +5,9 @@
         <h2 class="n-content__title">
           {{ itemContent.title }}
         </h2>
-        <img :src="singleNews.image" class="n-content__img" />
+        <div class="img__wrapper">
+          <img :src="singleNews.image" class="n-content__img" />
+        </div>
         <p class="n-content__p">{{ itemContent.content }}</p>
         <div class="n-content__date">
           <span>{{ format }}</span>
@@ -62,6 +64,10 @@ export default {
 </script>
 
 <style lang="scss">
+.img__wrapper {
+  width: 100%;
+  text-align: center;
+}
 .n-content {
   &__title {
     font-weight: 500;
@@ -73,7 +79,7 @@ export default {
   }
 
   &__img {
-    width: 100%;
+    max-height: 408px;
   }
 
   &__p {

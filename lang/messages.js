@@ -6,7 +6,7 @@ export default {
     requisites: 'Реквизиты',
     contacts: 'Contacts',
     address:
-      '“Iyman” Foundation for the Development of Spiritual Culture under the Administration of the President of the Kyrgyz Republic <br/> Erkindik blvd. 56 <br/> 720040 Bishkek city <br/> Kyrgyz Republic',
+      '“Iyman” Foundation for the Development of Spiritual Culture under the Administration of the President of the Kyrgyz Republic <br/> <strong>Erkindik blvd. 56 <br/> 720040 Bishkek city <br/> Kyrgyz Republic</strong>',
     rights: 'Все права защишены',
     administration: 'Администрация Президента Кыргызской Республики',
     fondDesc: 'руханий маданиятты онуктуруу фонду',
@@ -31,6 +31,7 @@ export default {
     charity: 'Благотворительность',
     aboutFrdk: 'О ФРДК «Ыйман»',
     title: 'Ыйман - руханий маданиятты онуктуруу фонду',
+    follow_us: 'FOLLOW US',
   },
   ky: {
     search: 'Издоо',
@@ -39,7 +40,7 @@ export default {
     requisites: 'Реквизиты',
     contacts: 'Контакты',
     address:
-      'Кыргыз Республикасынын Администрациясынын алдындагы «Ыйман» диний маданиятты өнүктүрүү фонду» <br/> Эркиндик бул., 56 <br/> 720040 Бишкек шаары <br/> Кыргыз Республикасы',
+      'Кыргыз Республикасынын Администрациясынын алдындагы «Ыйман» диний маданиятты өнүктүрүү фонду» <br/> <strong>Эркиндик бул., 56 <br/> 720040 Бишкек шаары <br/> Кыргыз Республикасы</strong>',
     rights: 'Все права защишены',
     administration: 'Администрация Президента Кыргызской Республики',
     fondDesc: 'руханий маданиятты онуктуруу фонду',
@@ -64,6 +65,7 @@ export default {
     charity: 'Благотворительность',
     aboutFrdk: 'О ФРДК «Ыйман»',
     title: 'Ыйман - руханий маданиятты онуктуруу фонду',
+    follow_us: 'FOLLOW US',
   },
   ru: {
     search: 'Поиск',
@@ -72,7 +74,7 @@ export default {
     requisites: 'Реквизиты',
     contacts: 'Контакты',
     address:
-      '«Фонд развития духовной культуры «Ыйман» при Администрации Президента Кыргызской Республики <br/> бул. Эркиндик, 56 <br/> 720040 г. Бишкек <br/> Кыргызская Республика',
+      '«Фонд развития духовной культуры «Ыйман» при Администрации Президента Кыргызской Республики <br/> <strong>бул. Эркиндик, 56 <br/> 720040 г. Бишкек <br/> Кыргызская Республика</strong>',
     rights: 'Все права защишены',
     administration: 'Администрация Президента Кыргызской Республики',
     fondDesc: 'руханий маданиятты онуктуруу фонду',
@@ -97,5 +99,6 @@ export default {
     charity: 'Благотворительность',
     aboutFrdk: 'О ФРДК «Ыйман»',
     title: 'Ыйман - руханий маданиятты онуктуруу фонду',
+    follow_us: 'FOLLOW US',
   },
 }

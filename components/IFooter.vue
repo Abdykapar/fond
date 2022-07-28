@@ -1,24 +1,30 @@
 <template>
-  <div>
+  <div class="footer__wrapper">
     <div id="contacts" class="container">
-      <h2 class="section-title">{{ $t('contacts') }}</h2>
+      <h2 class="section-title section-title--white">{{ $t('contacts') }}</h2>
       <div class="footer">
         <ul class="footer__contacts">
+          <li v-html="$t('address')" />
           <li>
-            <span class="footer__tel">Тел.</span><br />
+            <span class="footer__tel">Т:</span>
             <a class="footer__tel" href="tel:+996312625130"
-              >+996 312 62 51 30<br
-            /></a>
+              >+996 312 62 51 30</a
+            >
             <a class="footer__tel" href="tel:+996312624636"
-              >+996 312 62 46 36<br
-            /></a>
+              >+996 312 62 46 36
+            </a>
+          </li>
+          <li>
+            <span class="footer__tel">F:</span>
+            <a class="footer__tel" href="tel:+996312625130"
+              >+996 312 62 51 30</a
+            >
           </li>
           <li>
             <a class="footer__mail" href="mailto:iyman.kg.22@gmail.com"
               >iyman.kg.22@gmail.com</a
             >
           </li>
-          <li v-html="$t('address')" />
         </ul>
         <div class="footer__map">
           <client-only>
@@ -45,6 +51,7 @@
         <div class="footer__body">
           <span class="footer__t">{{ $t('rights') }}</span>
           <ul class="social">
+            <li class="social__title">{{ $t('follow_us') }}:</li>
             <li>
               <a href="#" class="social__link">
                 <Instagram />
@@ -84,8 +91,16 @@ export default {
 <style lang="scss">
 .social {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, auto);
   column-gap: 29px;
+
+  &__title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
 }
 .social__link {
   path {
