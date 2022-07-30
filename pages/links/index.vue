@@ -9,6 +9,7 @@
     </i-breadcrumb>
     <div class="grid container">
       <i-card-2 v-for="item in links" :key="item.id" :item="item" />
+      <i-pagination item-type="links" />
     </div>
     <i-footer />
   </div>
@@ -16,15 +17,16 @@
 
 <script>
 import { mapState } from 'vuex'
+import IPagination from '../../components/IPagination.vue'
 import IBreadcrumb from '@/components/IBreadcrumb.vue'
 import IFooter from '@/components/IFooter.vue'
 import IHeader from '@/components/IHeader.vue'
 import ICard2 from '@/components/ICard2.vue'
 export default {
   name: 'ILinks',
-  components: { IHeader, IBreadcrumb, IFooter, ICard2 },
-  async asyncData({ store }) {
-    await store.dispatch('fetchLinks')
+  components: { IHeader, IBreadcrumb, IFooter, ICard2, IPagination },
+  async asyncData({ store, route }) {
+    await store.dispatch('fetchLinks', route.query.page || 1)
   },
   computed: {
     ...mapState(['links']),

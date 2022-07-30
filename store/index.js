@@ -34,14 +34,16 @@ export const state = () => ({
   donations: [],
   donation: {},
   frdk: [],
+  totalCount: 0,
 })
 
 export const actions = {
-  fetchGallery({ commit }) {
+  fetchGallery({ commit }, page) {
     return axios
-      .get(galleryPrefix)
+      .get(galleryPrefix, { params: { page } })
       .then((res) => {
-        commit('SET_GALLERY', res.data)
+        commit('SET_GALLERY', res.data.results || [])
+        commit('SET_PAGINATION', res.data)
       })
       .catch((err) => {
         console.log(err)
@@ -57,21 +59,23 @@ export const actions = {
         console.log(err)
       })
   },
-  fetchLinks({ commit }) {
+  fetchLinks({ commit }, page) {
     return axios
-      .get(linksPrefix)
+      .get(linksPrefix, { params: { page } })
       .then((res) => {
-        commit('SET_LINKS', res.data)
+        commit('SET_LINKS', res.data.results || [])
+        commit('SET_PAGINATION', res.data)
       })
       .catch((err) => {
         console.log(err)
       })
   },
-  fetchNews({ commit }) {
+  fetchNews({ commit }, page) {
     return axios
-      .get(newsPrefix)
+      .get(newsPrefix, { params: { page } })
       .then((res) => {
-        commit('SET_NEWS', res.data)
+        commit('SET_NEWS', res.data.results || [])
+        commit('SET_PAGINATION', res.data)
       })
       .catch((err) => {
         console.log(err)
@@ -244,6 +248,9 @@ export const mutations = {
   },
   SET_NEWS(state, data) {
     state.news = data
+  },
+  SET_PAGINATION(state, data) {
+    state.totalCount = data.count
   },
   SET_CHARITY(state, data) {
     state.charity = data

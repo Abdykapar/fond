@@ -10,21 +10,25 @@
     <div class="gallery-grid container">
       <image-card v-for="item in gallery" :key="item.id" :item="item" />
     </div>
+    <div class="container">
+      <i-pagination item-type="gallery" />
+    </div>
     <i-footer />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import IPagination from '@/components/IPagination.vue'
 import IBreadcrumb from '@/components/IBreadcrumb.vue'
 import IFooter from '@/components/IFooter.vue'
 import IHeader from '@/components/IHeader.vue'
 import ImageCard from '@/components/ImageCard.vue'
 export default {
   name: 'IGallery',
-  components: { IHeader, IBreadcrumb, IFooter, ImageCard },
-  async asyncData({ store }) {
-    await store.dispatch('fetchGallery')
+  components: { IHeader, IBreadcrumb, IFooter, ImageCard, IPagination },
+  async asyncData({ store, route }) {
+    await store.dispatch('fetchGallery', route.query.page)
   },
   computed: {
     ...mapState(['gallery']),

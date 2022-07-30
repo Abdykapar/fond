@@ -2,7 +2,7 @@
   <div class="container">
     <h2 class="section-title">{{ $t('links') }}</h2>
     <div class="links-list">
-      <i-card-2 v-for="item in links" :key="item.id" :item="item" />
+      <i-card-2 v-for="item in filteredLinks" :key="item.id" :item="item" />
     </div>
     <div class="section__show-all">
       <router-link to="/links" class="section__show-all__btn">{{
@@ -20,6 +20,9 @@ export default {
   computed: {
     links() {
       return this.$store.state.links
+    },
+    filteredLinks() {
+      return this.links.slice(0, 3)
     },
   },
 }

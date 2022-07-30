@@ -9,6 +9,7 @@
     </i-breadcrumb>
     <div class="grid container">
       <i-card v-for="item in news" :key="item.id" :item="item" />
+      <i-pagination />
     </div>
     <i-footer />
   </div>
@@ -20,14 +21,15 @@ import IBreadcrumb from '../../components/IBreadcrumb.vue'
 import ICard from '../../components/ICard.vue'
 import IFooter from '../../components/IFooter.vue'
 import IHeader from '../../components/IHeader.vue'
+import IPagination from '../../components/IPagination.vue'
 export default {
   name: 'INews',
-  components: { IHeader, IBreadcrumb, IFooter, ICard },
-  async asyncData({ store }) {
-    await store.dispatch('fetchNews')
+  components: { IHeader, IBreadcrumb, IFooter, ICard, IPagination },
+  async asyncData({ store, route }) {
+    await store.dispatch('fetchNews', route.query.page || 1)
   },
   computed: {
-    ...mapState(['news']),
+    ...mapState(['news', 'totalCount']),
   },
 }
 </script>

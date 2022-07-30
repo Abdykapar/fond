@@ -5,7 +5,9 @@
       <a-breadcrumb-item>
         <router-link to="/"> {{ $t('main') }} </router-link>
       </a-breadcrumb-item>
-      <a-breadcrumb-item>{{ $t('news') }}</a-breadcrumb-item>
+      <a-breadcrumb-item>
+        <router-link to="/news"> {{ $t('news') }}</router-link>
+      </a-breadcrumb-item>
       <a-breadcrumb-item>{{
         itemContent.title | truncate(100, '...')
       }}</a-breadcrumb-item>
@@ -28,12 +30,6 @@ export default {
     await store.dispatch('fetchSingleNews', params.id)
     await store.dispatch('fetchNews')
   },
-  created() {
-    this.fetchSingleNews(this.$route.params.id)
-  },
-  methods: {
-    ...mapActions(['fetchSingleNews']),
-  },
   computed: {
     ...mapState(['singleNews', 'news']),
     itemContent() {
@@ -42,6 +38,12 @@ export default {
         this.singleNews.translations[this.$i18n.localeProperties.code] || {}
       )
     },
+  },
+  created() {
+    this.fetchSingleNews(this.$route.params.id)
+  },
+  methods: {
+    ...mapActions(['fetchSingleNews']),
   },
 }
 </script>

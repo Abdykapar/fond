@@ -2,7 +2,7 @@
   <div class="container">
     <h2 class="section-title">{{ $t(title) }}</h2>
     <div class="news-list">
-      <i-card v-for="item in news" :key="item.id" :item="item" />
+      <i-card v-for="item in filteredNews" :key="item.id" :item="item" />
     </div>
     <div class="section__show-all">
       <router-link :to="allBtnData.link" class="section__show-all__btn">{{
@@ -30,9 +30,16 @@ export default {
         link: '/news',
       }),
     },
+    showAll: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     ...mapState(['news']),
+    filteredNews() {
+      return this.showAll ? this.news : this.news.slice(0, 3)
+    },
   },
 }
 </script>
