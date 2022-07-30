@@ -15,7 +15,11 @@
       </div>
     </div>
     <news-gallery :images="singleNews.gallery" />
-    <news-list :all-btn-data="allBtnData" :news="news" :title="otherTitle" />
+    <news-list
+      :all-btn-data="allBtnData"
+      :news="filteredNews"
+      :title="otherTitle"
+    />
   </div>
 </template>
 
@@ -59,6 +63,9 @@ export default {
     format() {
       return moment(this.singleNews.updated_at).format('DD/MM/YYYY')
     },
+    filteredNews() {
+      return this.news.filter((i) => i.id !== this.singleNews.id)
+    },
   },
 }
 </script>
@@ -76,10 +83,21 @@ export default {
     text-align: center;
     color: #000000;
     padding: 20px 0 30px;
+
+    @media (max-width: 840px) {
+      font-size: 20px;
+      line-height: 25px;
+    }
   }
 
   &__img {
     max-height: 408px;
+
+    @media (max-width: 840px) {
+      width: 100%;
+      height: auto;
+      max-height: unset;
+    }
   }
 
   &__p {
@@ -88,6 +106,11 @@ export default {
     font-size: 24px;
     line-height: 37px;
     color: #000000;
+
+    @media (max-width: 840px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   &__date {

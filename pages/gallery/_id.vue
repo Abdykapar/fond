@@ -60,5 +60,12 @@ export default {
   column-gap: 27px;
   row-gap: 18px;
   grid-template-columns: repeat(3, 347px);
+
+  @media (max-width: 840px) {
+    grid-template-columns: repeat(2, 175px);
+    column-gap: 8px;
+    justify-content: center;
+    row-gap: 20px;
+  }
 }
 </style>

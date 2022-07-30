@@ -2,7 +2,7 @@
   <div>
     <Header />
     <HomeSlider />
-    <NewsList />
+    <NewsList :news="news" />
     <LinksList />
     <ImageList />
     <IFooter />
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import ImageList from '@/components/ImageList.vue'
 import NewsList from '@/components/NewsList.vue'
 import Header from '@/components/IHeader.vue'
@@ -23,6 +24,9 @@ export default {
     await store.dispatch('fetchGallery')
     await store.dispatch('fetchLinks')
     await store.dispatch('fetchNews')
+  },
+  computed: {
+    ...mapState(['news']),
   },
 }
 </script>

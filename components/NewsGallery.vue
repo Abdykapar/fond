@@ -66,10 +66,14 @@ export default {
   grid-template-columns: repeat(5, 212px);
   gap: 9px;
 
+  @media (max-width: 840px) {
+    grid-template-columns: repeat(2, 212px);
+  }
+
   &__img {
     height: 170px;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 
     &__wrapper {
       position: relative;

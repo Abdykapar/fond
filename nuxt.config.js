@@ -20,7 +20,7 @@ export default {
   css: ['ant-design-vue/dist/antd.css', '@/static/style/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/antd-ui', '@/plugins/filters'],
+  plugins: ['@/plugins/antd-ui', '@/plugins/filters', '@/plugins/vue-agile'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -39,10 +39,12 @@ export default {
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ['vue-agile'],
+  },
 
   axios: {
-    baseURL: '165.227.147.217:8888/api', // Used as fallback if no runtime config is provided
+    baseURL: 'https://api.iyman.kg/api', // Used as fallback if no runtime config is provided
   },
 
   i18n: {

@@ -1,15 +1,17 @@
 <template>
   <div>
-    <a-carousel :after-change="onChange">
-      <div v-for="item in sliderNews" :key="item.id" class="slide">
-        <img class="slide__img" :src="item.image" title="" />
-        <div class="slide__content">
-          <p class="slide__text">
-            {{ getContent(item) }}
-          </p>
+    <client-only>
+      <a-carousel :after-change="onChange">
+        <div v-for="item in sliderNews" :key="item.id" class="slide">
+          <img class="slide__img" :src="item.image" title="" />
+          <div class="slide__content">
+            <p class="slide__text">
+              {{ getContent(item) }}
+            </p>
+          </div>
         </div>
-      </div>
-    </a-carousel>
+      </a-carousel>
+    </client-only>
   </div>
 </template>
 
@@ -41,7 +43,7 @@ export default {
 <style lang="scss" scoped>
 .ant-carousel :deep(.slick-slide) {
   text-align: center;
-  line-height: 160px;
+  /* line-height: 160px; */
   overflow: hidden;
 }
 
@@ -50,7 +52,7 @@ export default {
 }
 
 .ant-carousel :deep(.slick-dots-bottom) {
-  bottom: 100px;
+  bottom: 35px;
 }
 
 .ant-carousel :deep(.slick-dots li button) {

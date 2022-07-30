@@ -8,11 +8,21 @@
   justify-items: end;
   column-gap: 20px;
 
+  @media (max-width: 840px) {
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+
   &__tel {
     font-weight: 400;
     font-size: 24px;
     line-height: 30px;
     color: $white;
+
+    @media (max-width: 840px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 
   &__mail {
@@ -27,6 +37,11 @@
     font-size: 24px;
     line-height: 30px;
     color: $white;
+
+    @media (max-width: 840px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 
   &__wrapper {
@@ -34,11 +49,20 @@
     padding-top: 32px;
     padding-bottom: 40px;
     margin-top: 20px;
+    @media (max-width: 840px) {
+      padding-top: 1px;
+      padding-bottom: 20px;
+    }
   }
 
   &__map {
     width: 433px;
     height: 262px;
+
+    @media (max-width: 840px) {
+      height: 120px;
+      width: 100%;
+    }
   }
 }
 
@@ -48,6 +72,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding-top: 28px;
+
+    @media (max-width: 840px) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
   }
 
   .footer__t {
@@ -55,5 +84,11 @@ footer {
     font-size: 15px;
     line-height: 19px;
     color: $white;
+
+    @media (max-width: 840px) {
+      font-size: 12px;
+      line-height: 15px;
+      margin-top: 30px;
+    }
   }
 }

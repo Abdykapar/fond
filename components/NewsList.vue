@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import ICard from './ICard.vue'
 export default {
   name: 'NewsList',
@@ -34,9 +33,12 @@ export default {
       type: Boolean,
       default: false,
     },
+    news: {
+      type: Array,
+      default: () => [],
+    },
   },
   computed: {
-    ...mapState(['news']),
     filteredNews() {
       return this.showAll ? this.news : this.news.slice(0, 3)
     },

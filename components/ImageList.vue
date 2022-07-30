@@ -27,11 +27,17 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .image-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 27px;
   row-gap: 18px;
+
+  @media (max-width: 840px) {
+    column-gap: 8px;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
 }
 </style>

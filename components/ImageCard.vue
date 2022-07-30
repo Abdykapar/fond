@@ -60,6 +60,11 @@ export default {
   justify-content: flex-end;
   transition: all 300ms ease-in-out;
 
+  @media (max-width: 840px) {
+    width: 175px;
+    height: 211px;
+  }
+
   &:hover {
     transform: scale(1.025);
   }
@@ -70,6 +75,10 @@ export default {
     padding: 25px 20px;
     display: grid;
     align-items: flex-end;
+
+    @media (max-width: 840px) {
+      padding: 11px 10px;
+    }
   }
 
   &__text {
@@ -78,6 +87,11 @@ export default {
     line-height: 23px;
     text-align: center;
     color: #ffffff;
+
+    @media (max-width: 840px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 }
 </style>

@@ -94,12 +94,28 @@ export default {
   grid-template-columns: repeat(4, auto);
   column-gap: 29px;
 
+  @media (max-width: 840px) {
+    /* width: 100%; */
+    justify-items: center;
+    grid-template-columns: repeat(3, auto);
+    row-gap: 17px;
+    margin: auto;
+    column-gap: 49px;
+  }
+
   &__title {
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
     color: #ffffff;
     text-transform: uppercase;
+
+    @media (max-width: 840px) {
+      font-size: 15px;
+      line-height: 19px;
+      grid-column: 1 / 4;
+      grid-row: 1;
+    }
   }
 }
 .social__link {
