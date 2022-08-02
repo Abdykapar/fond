@@ -1,6 +1,6 @@
 <template>
   <div class="i-card2">
-    <a :href="item.link" target="_blank" class="size-2 primary-color">
+    <a :href="item.link" target="_blank" class="link size-2 primary-color">
       {{ item.link }}
     </a>
     <p class="size-3 gray-color">
@@ -31,5 +31,9 @@ export default {
 .i-card2 {
   display: grid;
   row-gap: 10px;
+}
+
+.link {
+  word-break: break-all;
 }
 </style>

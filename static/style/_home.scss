@@ -111,6 +111,10 @@
 .news-list {
   display: grid;
   row-gap: 15px;
+
+  @media (max-width: 840px) {
+    row-gap: 30px;
+  }
 }
 
 .section {
