@@ -24,8 +24,8 @@
 
     @media (max-width: 840px) {
       font-weight: 700;
-      font-size: 24px;
-      line-height: 30px;
+      font-size: 20px;
+      line-height: 26px;
       text-align: center;
     }
   }
@@ -134,6 +134,7 @@
 
     @media (max-width: 840px) {
       justify-content: flex-start;
+      margin-bottom: 25px;
     }
   }
 }

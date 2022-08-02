@@ -28,9 +28,13 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .links-list {
   display: grid;
   row-gap: 35px;
+
+  @media (max-width: 840px) {
+    row-gap: 15px;
+  }
 }
 </style>
