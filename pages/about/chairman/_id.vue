@@ -69,37 +69,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.chairmans {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  row-gap: 30px;
-}
-.min-height {
-  height: 450px;
-}
-.chairman {
-  text-align: center;
-  &__avatar {
-    border-radius: 50%;
-    height: 186px;
-    width: 186px;
-    object-fit: cover;
-  }
-
-  &__name {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 155.7%;
-    color: #000000;
-    margin: 26px 0 15px;
-  }
-
-  &__date {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 155.7%;
-    color: #000000;
-  }
-}
-</style>
+<style lang="scss"></style>

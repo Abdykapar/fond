@@ -52,6 +52,11 @@ export default {
     line-height: 45px;
     text-align: center;
     color: #000000;
+
+    @media (max-width: 840px) {
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
 
   &__p {
@@ -60,6 +65,11 @@ export default {
     line-height: 37px;
     margin: 30px 0;
     color: #000000;
+
+    @media (max-width: 840px) {
+      font-size: 14px;
+      line-height: 155.7%;
+    }
   }
 
   &__list {
@@ -74,6 +84,11 @@ export default {
     line-height: 155.7%;
     color: #000000;
     text-align: center;
+
+    @media (max-width: 840px) {
+      font-size: 20px;
+      line-height: 155.7%;
+    }
   }
 }
 </style>

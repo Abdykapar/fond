@@ -58,6 +58,12 @@ export default {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 30px;
+
+  @media (max-width: 840px) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+    column-gap: 18px;
+  }
 }
 
 .logo {
@@ -66,6 +72,11 @@ export default {
     height: 186px;
     border-radius: 50%;
     object-fit: cover;
+
+    @media (max-width: 840px) {
+      width: 164px;
+      height: 164px;
+    }
   }
   &__title {
     font-weight: 500;
@@ -73,6 +84,12 @@ export default {
     line-height: 155.7%;
     color: #000000;
     margin-top: 26px;
+
+    @media (max-width: 840px) {
+      font-size: 14px;
+      line-height: 155.7%;
+      margin-top: 10px;
+    }
   }
 }
 </style>

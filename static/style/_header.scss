@@ -49,6 +49,14 @@
       .arrow-icon {
         transform: rotate(90deg);
       }
+
+      .ant-menu-submenu-title {
+        color: #0064b0;
+      }
+
+      svg path {
+        fill: #0064b0;
+      }
     }
 
     .ant-menu-submenu-title {
@@ -103,7 +111,7 @@
         right: 0;
         bottom: 0;
         background: rgba(0, 0, 0, 0.3);
-        z-index: 8;
+        z-index: 10000;
       }
 
       &__menu {
@@ -113,7 +121,7 @@
         min-width: 284px;
         background-color: #fff;
         padding: 28px 17px;
-        z-index: 11;
+        z-index: 11000;
         animation: left 300ms ease-in-out;
       }
 
@@ -139,6 +147,14 @@
         background-color: inherit;
         cursor: pointer;
         justify-self: start;
+        display: flex;
+      }
+
+      &--support {
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+        justify-self: flex-end;
         display: flex;
       }
     }

@@ -111,6 +111,12 @@ body {
   width: 423px;
   height: 412px;
   object-fit: cover;
+
+  @media (max-width: 840px) {
+    margin: 0 0 20px;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .reset-btn {
