@@ -16,7 +16,7 @@
                 :placeholder="$t('search')"
                 class="header__input"
                 style="width: 305px"
-                @search="() => {}"
+                @search="onSearch"
               />
               <a-select
                 ref="select"
@@ -183,7 +183,7 @@
                       :placeholder="$t('search')"
                       class="header__scroll-input"
                       style="width: 182px"
-                      @search="() => {}"
+                      @search="onSearch"
                     />
                   </template>
                 </a-popover>
@@ -279,7 +279,7 @@
               :placeholder="$t('search')"
               class="header__input"
               style="width: 212px"
-              @search="() => {}"
+              @search="onSearch"
             />
             <button class="header__main--burger" @click="showMenu = false">
               <svg
@@ -413,6 +413,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import IDonation from './IDonation.vue'
 import { menus } from '@/static/data'
 
@@ -452,6 +453,7 @@ export default {
     document.removeEventListener('scroll', this.onScroll)
   },
   methods: {
+    ...mapActions(['fetchSearch']),
     langChange(val) {
       this.$i18n.setLocale(val)
     },
@@ -465,6 +467,11 @@ export default {
     },
     onClickMenu() {
       this.showMenu = false
+    },
+    onSearch(data) {
+      if (this.$route.path === '/search') {
+        this.fetchSearch(data)
+      } else this.$router.push({ path: '/search', query: { query: data } })
     },
   },
 }

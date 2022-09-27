@@ -9,9 +9,11 @@
           {{ itemContent.title }}
         </h3>
       </router-link>
-      <p class="i-card__text">
-        {{ itemContent.content | truncate(300, '...') }}
-      </p>
+      <slot :content="itemContent">
+        <p class="i-card__text">
+          {{ itemContent.content | truncate(300, '...') }}
+        </p>
+      </slot>
       <span class="i-card__date">{{ format(item.updated_at) }}</span>
     </div>
   </div>

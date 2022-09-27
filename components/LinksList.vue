@@ -17,9 +17,15 @@ import ICard2 from './ICard2.vue'
 export default {
   name: 'LinksList',
   components: { ICard2 },
+  props: {
+    data: {
+      type: Array,
+      default: null,
+    },
+  },
   computed: {
     links() {
-      return this.$store.state.links
+      return this.data ? this.data : this.$store.state.links
     },
     filteredLinks() {
       return this.links.slice(0, 3)

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://api.iyman.kg/api'
+axios.defaults.baseURL = 'http://api.iyman.kg/api'
 axios.defaults.headers.common.Accept = 'application/json'
 
 const newsPrefix = '/news'
@@ -11,6 +11,7 @@ const frdkPrefix = '/frdk'
 const charityPrefix = '/charity'
 const donationPrefix = '/donate'
 const frdkAboutPrefix = 'about-us/'
+const searchPrefix = 'search/'
 
 export const state = () => ({
   gallery: [],
@@ -35,6 +36,7 @@ export const state = () => ({
   donation: {},
   frdk: [],
   totalCount: 0,
+  searchResult: {},
 })
 
 export const actions = {
@@ -65,6 +67,16 @@ export const actions = {
       .then((res) => {
         commit('SET_LINKS', res.data.results || [])
         commit('SET_PAGINATION', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  fetchSearch({ commit }, query) {
+    return axios
+      .get(searchPrefix, { params: { query } })
+      .then((res) => {
+        commit('SET_SEARCH', res.data || {})
       })
       .catch((err) => {
         console.log(err)
@@ -242,6 +254,9 @@ export const mutations = {
   },
   SET_LINKS(state, data) {
     state.links = data
+  },
+  SET_SEARCH(state, data) {
+    state.searchResult = data
   },
   SET_FRDK(state, data) {
     state.frdk = data
