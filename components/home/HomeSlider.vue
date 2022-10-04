@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="container container--big">
     <client-only>
       <a-carousel :after-change="onChange">
         <div v-for="item in sliderNews" :key="item.id" class="slide">
-          <img class="slide__img" :src="item.image" title="" />
+          <img class="slide__img" :src="item.slider" title="" />
           <div class="slide__content">
             <p class="slide__text">
               {{ getContent(item) }}

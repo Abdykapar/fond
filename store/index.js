@@ -12,6 +12,7 @@ const charityPrefix = '/charity'
 const donationPrefix = '/donate'
 const frdkAboutPrefix = 'about-us/'
 const searchPrefix = 'search/'
+const mediaPrefix = 'youtube-media/'
 
 export const state = () => ({
   gallery: [],
@@ -37,6 +38,7 @@ export const state = () => ({
   frdk: [],
   totalCount: 0,
   searchResult: {},
+  media: {},
 })
 
 export const actions = {
@@ -66,6 +68,17 @@ export const actions = {
       .get(linksPrefix, { params: { page } })
       .then((res) => {
         commit('SET_LINKS', res.data.results || [])
+        commit('SET_PAGINATION', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  fetchMedia({ commit }, page) {
+    return axios
+      .get(mediaPrefix, { params: { page } })
+      .then((res) => {
+        commit('SET_MEDIA', res.data.results || [])
         commit('SET_PAGINATION', res.data)
       })
       .catch((err) => {
@@ -275,6 +288,9 @@ export const mutations = {
   },
   SET_EVENT(state, data) {
     state.event = data
+  },
+  SET_MEDIA(state, data) {
+    state.media = data
   },
   SET_DONATIONS(state, data) {
     state.donations = data

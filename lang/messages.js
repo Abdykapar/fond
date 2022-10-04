@@ -32,6 +32,8 @@ export default {
     aboutFrdk: 'О ФРДК «Ыйман»',
     title: 'Ыйман - руханий маданиятты онуктуруу фонду',
     follow_us: 'FOLLOW US',
+    media: 'Media',
+    allMedia: 'All media',
   },
   ky: {
     search: 'Издоо',
@@ -66,6 +68,8 @@ export default {
     aboutFrdk: 'О ФРДК «Ыйман»',
     title: 'Ыйман - руханий маданиятты онуктуруу фонду',
     follow_us: 'FOLLOW US',
+    media: 'Медиа',
+    allMedia: 'Видеолордун баары',
   },
   ru: {
     search: 'Поиск',
@@ -100,5 +104,7 @@ export default {
     aboutFrdk: 'О ФРДК «Ыйман»',
     title: 'Ыйман - руханий маданиятты онуктуруу фонду',
     follow_us: 'FOLLOW US',
+    media: 'Медиа',
+    allMedia: 'Все Видео',
   },
 }
