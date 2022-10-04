@@ -8,7 +8,7 @@
         <div class="img__wrapper">
           <img :src="singleNews.image" class="n-content__img" />
         </div>
-        <p class="n-content__p">{{ itemContent.content }}</p>
+        <p class="n-content__p" v-html="itemContent.content"></p>
         <div class="n-content__date">
           <span>{{ format }}</span>
         </div>
