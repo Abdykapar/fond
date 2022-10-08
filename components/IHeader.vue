@@ -60,9 +60,9 @@
               </ul>
             </div>
             <div class="sub-header__logo">
-              <router-link to="/">
+              <nuxt-link to="/">
                 <img src="/img/logo.png" :alt="$t('fondDesc')" />
-              </router-link>
+              </nuxt-link>
             </div>
             <div class="sub-header__right">
               <a-button class="button primary" @click="isOpenModal = true">{{
@@ -75,22 +75,6 @@
       <div class="container">
         <ul class="menu">
           <li v-for="menu in menus" :key="menu.code" class="menu__item">
-            <!-- <a-select v-if="menu.children" class="menu__list" :value="menu.title">
-            <a-select-option
-              v-for="child in menu.children"
-              :key="child.code"
-              :value="child.title"
-              :title="child.title"
-            >
-              <router-link class="menu__link" :to="child.link">
-                {{ child.title }}
-              </router-link>
-            </a-select-option>
-          </a-select>
-          <router-link v-else class="menu__link" :to="menu.link">{{
-            menu.title
-          }}</router-link> -->
-
             <a-dropdown v-if="menu.children" v-model="menu.isShow">
               <a class="menu__link" @click.prevent>
                 {{ menu.title }}
@@ -111,16 +95,16 @@
               <template #overlay>
                 <a-menu @click="() => (menu.isShow = false)">
                   <a-menu-item v-for="child in menu.children" :key="child.code">
-                    <router-link class="menu__link" :to="child.link">
+                    <nuxt-link class="menu__link" :to="child.link">
                       {{ child.title }}
-                    </router-link>
+                    </nuxt-link>
                   </a-menu-item>
                 </a-menu>
               </template>
             </a-dropdown>
-            <router-link v-else class="menu__link" :to="menu.link">{{
+            <nuxt-link v-else class="menu__link" :to="menu.link">{{
               menu.title
-            }}</router-link>
+            }}</nuxt-link>
           </li>
         </ul>
       </div>
@@ -151,9 +135,9 @@
                 </ul>
               </div>
               <div class="sub-header__logo">
-                <router-link to="/">
+                <nuxt-link to="/">
                   <img src="/img/logo.png" :alt="$t('fondDesc')" />
-                </router-link>
+                </nuxt-link>
               </div>
               <div class="sub-header__right">
                 <a-popover
@@ -232,16 +216,16 @@
                       v-for="child in menu.children"
                       :key="child.code"
                     >
-                      <router-link class="menu__link" :to="child.link">
+                      <nuxt-link class="menu__link" :to="child.link">
                         {{ child.title }}
-                      </router-link>
+                      </nuxt-link>
                     </a-menu-item>
                   </a-menu>
                 </template>
               </a-dropdown>
-              <router-link v-else class="menu__link" :to="menu.link">{{
+              <nuxt-link v-else class="menu__link" :to="menu.link">{{
                 menu.title
-              }}</router-link>
+              }}</nuxt-link>
             </li>
           </ul>
         </div>
@@ -337,16 +321,16 @@
                 </template>
                 <a-menu-item-group :key="menu.code">
                   <a-menu-item v-for="item in menu.children" :key="item.code">
-                    <router-link :to="item.link" @click.native="onClickMenu">{{
+                    <nuxt-link :to="item.link" @click.native="onClickMenu">{{
                       item.title
-                    }}</router-link>
+                    }}</nuxt-link>
                   </a-menu-item>
                 </a-menu-item-group>
               </a-sub-menu>
               <a-menu-item v-else :key="menu.code + 'else'">
-                <router-link :to="menu.link" @click.native="onClickMenu">
+                <nuxt-link :to="menu.link" @click.native="onClickMenu">
                   {{ menu.title }}
-                </router-link>
+                </nuxt-link>
               </a-menu-item>
             </template>
           </a-menu>
@@ -368,9 +352,9 @@
             </li>
           </ul>
         </div>
-        <router-link to="/">
+        <nuxt-link to="/">
           <img src="/img/logo-mobile.svg" :alt="$t('fondDesc')" />
-        </router-link>
+        </nuxt-link>
         <button class="header__main--support" @click="isOpenModal = true">
           <svg
             width="27"
@@ -401,9 +385,9 @@
             />
           </svg>
         </button>
-        <router-link to="/">
+        <nuxt-link to="/">
           <img src="/img/logo-mobile.svg" :alt="$t('fondDesc')" />
-        </router-link>
+        </nuxt-link>
       </div> -->
     </div>
     <a-modal v-model="isOpenModal" title="" :footer="null" :width="1108">
