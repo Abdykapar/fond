@@ -15,14 +15,17 @@
             </a>
           </li>
           <li>
-            <span class="footer__tel">F:</span>
-            <a class="footer__tel" href="tel:+996312625130"
-              >+996 312 62 51 30</a
+            <span class="footer__tel">WhatsApp:</span>
+            <a
+              class="footer__tel"
+              target="_blank"
+              href="https://wa.me/+996555015566"
+              >+996555015566</a
             >
           </li>
           <li>
-            <a class="footer__mail" href="mailto:iyman.kg.22@gmail.com"
-              >iyman.kg.22@gmail.com</a
+            <a class="footer__mail" href="mailto:yimanfond@gmail.com"
+              >yimanfond@gmail.com</a
             >
           </li>
         </ul>
@@ -53,17 +56,29 @@
           <ul class="social">
             <li class="social__title">{{ $t('follow_us') }}:</li>
             <li>
-              <a href="#" class="social__link">
-                <Instagram />
+              <a
+                href="https://t.me/iymanfondu"
+                target="_blank"
+                class="social__link"
+              >
+                <Telegram />
               </a>
             </li>
             <li>
-              <a href="#" class="social__link">
+              <a
+                href="https://www.facebook.com/yimanfondu"
+                class="social__link"
+                target="_blank"
+              >
                 <Facebook />
               </a>
             </li>
             <li>
-              <a href="#" class="social__link">
+              <a
+                href="https://twitter.com/yimanfond"
+                target="_blank"
+                class="social__link"
+              >
                 <Twitter />
               </a>
             </li>
@@ -76,14 +91,16 @@
 
 <script>
 import Facebook from '@/static/icon/facebook.svg'
-import Instagram from '@/static/icon/instagram.svg'
+// import Instagram from '@/static/icon/instagram.svg'
 import Twitter from '@/static/icon/twitter.svg'
+import Telegram from '@/static/icon/telegram.svg'
 export default {
   name: 'IFooter',
   components: {
     Facebook,
-    Instagram,
+    // Instagram,
     Twitter,
+    Telegram,
   },
 }
 </script>
