@@ -7,8 +7,8 @@ export default {
     contacts: 'Contacts',
     address: `The fund for the development of spiritual culture "Iyman" under the Administration of the President of the Kyrgyz Republic <br/> <strong>Erkindik blvd. 56 <br/> 720040 Bishkek city <br/> Kyrgyz Republic</strong>'`,
     rights: 'All rights reserved',
-    administration: `The Administration of the President of the Kyrgyz Republic 
-    fondDesc: The fund for the development of spiritual culture`,
+    administration: `The Administration of the President of the Kyrgyz Republic`,
+    fondDesc: `The fund for the development of spiritual culture`,
     donate: 'Donation',
     gallery: 'Gallery',
     allPhotos: 'All photos',
