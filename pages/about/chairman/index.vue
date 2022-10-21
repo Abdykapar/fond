@@ -13,7 +13,7 @@
 
       <div class="page-content min-height" v-html="itemContent.content"></div>
       <div>
-        <h2 class="section-title">{{ $t('exChairman') }}</h2>
+        <h2 class="section-title">{{ $t('chairman_zam') }}</h2>
         <div class="chairmans">
           <router-link
             v-for="item in others"

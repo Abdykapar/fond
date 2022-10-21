@@ -57,7 +57,7 @@ export const menus = [
     children: [
       {
         title: 'Мероприятия',
-        code: 'activity_events',
+        code: 'event',
         link: '/activity/event',
       },
       {

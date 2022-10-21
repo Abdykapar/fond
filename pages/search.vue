@@ -3,8 +3,8 @@
     <i-header />
     <HomeSlider />
     <div class="container">
-      <p class="search__label">Результаты поиска</p>
-      <p class="search__text">Иш чара</p>
+      <p class="search__label">{{ $t('searchResult') }}</p>
+      <p class="search__text">{{ $route.query.query }}</p>
       <template v-if="searchResult.news && searchResult.news.length">
         <NewsList :news="searchResult.news" />
       </template>
@@ -17,14 +17,19 @@
           searchResult.history_of_creation.length
         "
       >
-        <h2 class="section-title">{{ 'История создания' }}</h2>
+        <h2 class="section-title">{{ $t('historyCreation') }}</h2>
         <div class="news-list">
           <i-card
-            v-for="item in searchResult.history_of_creation"
-            :key="item.id"
-            :item="item"
+            :item="searchResult.history_of_creation[0]"
+            link="/about/history"
           >
-            ...
+          </i-card>
+        </div>
+      </template>
+      <template v-if="searchResult.about_us && searchResult.about_us.length">
+        <h2 class="section-title">{{ $t('aboutFond') }}</h2>
+        <div class="news-list">
+          <i-card :item="searchResult.about_us[0]" link="/about/about-us">
           </i-card>
         </div>
       </template>
@@ -34,14 +39,12 @@
           searchResult.organizational_structure.length
         "
       >
-        <h2 class="section-title">{{ 'Организационная структура' }}</h2>
+        <h2 class="section-title">{{ $t('orgStructure') }}</h2>
         <div class="news-list">
           <i-card
-            v-for="item in searchResult.organizational_structure"
-            :key="item.id"
-            :item="item"
+            :item="searchResult.organizational_structure[0]"
+            link="/about/organization"
           >
-            ...
           </i-card>
         </div>
       </template>

@@ -34,6 +34,8 @@ export default {
     follow_us: 'FOLLOW US',
     media: 'Media',
     allMedia: 'All media',
+    searchResult: 'Search results',
+    chairman_zam: 'Deputy Chairman',
   },
   ky: {
     search: 'Издөө',
@@ -71,6 +73,8 @@ export default {
     follow_us: 'Катталуу үчүн',
     media: 'Медиа',
     allMedia: 'Бардык видеолор',
+    searchResult: 'Издөөнүн жыйынтыгы',
+    chairman_zam: 'Төраганын орун басары',
   },
   ru: {
     search: 'Поиск',
@@ -108,5 +112,7 @@ export default {
     follow_us: 'Подписывайтесь на нас',
     media: 'Медиа',
     allMedia: 'Все Видео',
+    searchResult: 'Результаты поиска',
+    chairman_zam: 'Заместитель председателя правления',
   },
 }

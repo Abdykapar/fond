@@ -73,7 +73,11 @@
             </div>
             <div class="sub-header__logo">
               <nuxt-link :to="localePath('/')">
-                <img src="/img/logo.png" :alt="$t('fondDesc')" />
+                <img
+                  class="logo-img"
+                  src="/img/logo.png"
+                  :alt="$t('fondDesc')"
+                />
               </nuxt-link>
             </div>
             <div class="sub-header__right">
@@ -146,9 +150,6 @@
           <div class="container container--big">
             <div class="sub-header">
               <div class="sub-header__info">
-                <!-- <a class="sub-header__info-phone" href="tel:+996555555555"
-                  >+996 555 555 555</a
-                > -->
                 <ul class="sub-header__info-social">
                   <li>
                     <a
@@ -181,7 +182,11 @@
               </div>
               <div class="sub-header__logo">
                 <nuxt-link :to="localePath('/')">
-                  <img src="/img/logo.png" :alt="$t('fondDesc')" />
+                  <img
+                    class="logo-img"
+                    src="/img/logo.png"
+                    :alt="$t('fondDesc')"
+                  />
                 </nuxt-link>
               </div>
               <div class="sub-header__right">
@@ -554,5 +559,9 @@ export default {
       color: #0064b0;
     }
   }
+}
+
+.logo-img {
+  height: 60px;
 }
 </style>

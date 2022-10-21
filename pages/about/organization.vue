@@ -28,12 +28,12 @@ export default {
   name: 'AboutOrganization',
   components: { MainLayout, IBreadcrumb },
   async asyncData({ store }) {
-    await store.dispatch('fetchActivityOrgs')
+    await store.dispatch('fetchFrdkOrgStructure')
   },
   computed: {
-    ...mapState(['orgs']),
+    ...mapState(['frdkOrg']),
     single() {
-      return this.orgs[0] || {}
+      return this.frdkOrg[0] || {}
     },
     itemContent() {
       if (!this.single.translations) return {}

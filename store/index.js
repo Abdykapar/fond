@@ -27,6 +27,7 @@ export const state = () => ({
   orgs: [],
   org: {},
   projects: [],
+  frdkOrg: [],
   project: {},
   chairmans: [],
   chairman: {},
@@ -226,6 +227,16 @@ export const actions = {
         console.log(err)
       })
   },
+  fetchFrdkOrgStructure({ commit }) {
+    return axios
+      .get(`${frdkPrefix}/organizational-structure`)
+      .then((res) => {
+        commit('SET_FRDK_ORG', res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
   fetchCharity({ commit }) {
     return axios
       .get(`${charityPrefix}`)
@@ -261,6 +272,9 @@ export const actions = {
 export const mutations = {
   SET_GALLERY(state, data) {
     state.gallery = data
+  },
+  SET_FRDK_ORG(state, data) {
+    state.frdkOrg = data
   },
   SET_SINGLE_GALLERY(state, data) {
     state.singleGallery = data
