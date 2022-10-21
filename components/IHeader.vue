@@ -38,29 +38,41 @@
         <div class="container container--big">
           <div class="sub-header">
             <div class="sub-header__info">
-              <a class="sub-header__info-phone" href="tel:+996555555555"
+              <!-- <a class="sub-header__info-phone" href="tel:+996555555555"
                 >+996 555 555 555</a
-              >
+              > -->
               <ul class="sub-header__info-social">
                 <li>
-                  <a href="#" class="sub-header__info-social__icon">
+                  <a
+                    href="https://instagram.com/iyman.fondu?igshid=YmMyMTA2M2Y="
+                    target="_blank"
+                    class="sub-header__info-social__icon"
+                  >
                     <img src="/icon/instagram.svg" />
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="sub-header__info-social__icon">
+                  <a
+                    href="https://www.facebook.com/yimanfondu"
+                    target="_blank"
+                    class="sub-header__info-social__icon"
+                  >
                     <img src="/icon/facebook.svg" />
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="sub-header__info-social__icon">
+                  <a
+                    href="https://twitter.com/yimanfond"
+                    target="_blank"
+                    class="sub-header__info-social__icon"
+                  >
                     <img src="/icon/twitter.svg" />
                   </a>
                 </li>
               </ul>
             </div>
             <div class="sub-header__logo">
-              <nuxt-link to="/">
+              <nuxt-link :to="localePath('/')">
                 <img src="/img/logo.png" :alt="$t('fondDesc')" />
               </nuxt-link>
             </div>
@@ -82,13 +94,8 @@
                 aria-role="list"
               >
                 <template #trigger>
-                  <!-- <b-button
-                  label="Hover me!"
-                  type="is-info"
-                  icon-right="menu-down"
-                /> -->
                   <button class="menu__link">
-                    {{ menu.title }}
+                    {{ $t(menu.code) }}
 
                     <svg
                       width="8"
@@ -106,15 +113,30 @@
                 </template>
                 <template v-for="child in menu.children">
                   <b-dropdown-item :key="child.code" aria-role="listitem">
-                    <nuxt-link class="menu__link" :to="child.link">
-                      {{ child.title }}
+                    <nuxt-link class="menu__link" :to="localePath(child.link)">
+                      {{ $t(child.code) }}
                     </nuxt-link>
                   </b-dropdown-item>
                 </template>
               </b-dropdown>
-              <nuxt-link v-else class="menu__link" :to="menu.link">{{
-                menu.title
-              }}</nuxt-link>
+              <template v-else>
+                <nuxt-link
+                  v-if="menu.code === 'contacts'"
+                  :to="'#contacts'"
+                  class="menu__link"
+                  @click.native="onClickMenu"
+                >
+                  {{ $t(menu.code) }}
+                </nuxt-link>
+                <nuxt-link
+                  v-else
+                  :to="localePath(menu.link)"
+                  class="menu__link"
+                  @click.native="onClickMenu"
+                >
+                  {{ $t(menu.code) }}
+                </nuxt-link>
+              </template>
             </li>
           </ul>
         </client-only>
@@ -124,29 +146,41 @@
           <div class="container container--big">
             <div class="sub-header">
               <div class="sub-header__info">
-                <a class="sub-header__info-phone" href="tel:+996555555555"
+                <!-- <a class="sub-header__info-phone" href="tel:+996555555555"
                   >+996 555 555 555</a
-                >
+                > -->
                 <ul class="sub-header__info-social">
                   <li>
-                    <a href="#" class="sub-header__info-social__icon">
+                    <a
+                      href="https://instagram.com/iyman.fondu?igshid=YmMyMTA2M2Y="
+                      target="_blank"
+                      class="sub-header__info-social__icon"
+                    >
                       <img src="/icon/instagram.svg" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="sub-header__info-social__icon">
+                    <a
+                      href="https://www.facebook.com/yimanfondu"
+                      target="_blank"
+                      class="sub-header__info-social__icon"
+                    >
                       <img src="/icon/facebook.svg" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="sub-header__info-social__icon">
+                    <a
+                      href="https://twitter.com/yimanfond"
+                      target="_blank"
+                      class="sub-header__info-social__icon"
+                    >
                       <img src="/icon/twitter.svg" />
                     </a>
                   </li>
                 </ul>
               </div>
               <div class="sub-header__logo">
-                <nuxt-link to="/">
+                <nuxt-link :to="localePath('/')">
                   <img src="/img/logo.png" :alt="$t('fondDesc')" />
                 </nuxt-link>
               </div>
@@ -211,13 +245,8 @@
                   aria-role="list"
                 >
                   <template #trigger>
-                    <!-- <b-button
-                  label="Hover me!"
-                  type="is-info"
-                  icon-right="menu-down"
-                /> -->
                     <button class="menu__link">
-                      {{ menu.title }}
+                      {{ $t(menu.code) }}
 
                       <svg
                         width="8"
@@ -235,15 +264,33 @@
                   </template>
                   <template v-for="child in menu.children">
                     <b-dropdown-item :key="child.code" aria-role="listitem">
-                      <nuxt-link class="menu__link" :to="child.link">
-                        {{ child.title }}
+                      <nuxt-link
+                        class="menu__link"
+                        :to="localePath(child.link)"
+                      >
+                        {{ $t(child.code) }}
                       </nuxt-link>
                     </b-dropdown-item>
                   </template>
                 </b-dropdown>
-                <nuxt-link v-else class="menu__link" :to="menu.link">{{
-                  menu.title
-                }}</nuxt-link>
+                <template v-else>
+                  <nuxt-link
+                    v-if="menu.code === 'contacts'"
+                    :to="'#contacts'"
+                    class="menu__link"
+                    @click.native="onClickMenu"
+                  >
+                    {{ $t(menu.code) }}
+                  </nuxt-link>
+                  <nuxt-link
+                    v-else
+                    :to="localePath(menu.link)"
+                    class="menu__link"
+                    @click.native="onClickMenu"
+                  >
+                    {{ $t(menu.code) }}
+                  </nuxt-link>
+                </template>
               </li>
             </ul>
           </client-only>
@@ -322,7 +369,7 @@
           <a-menu id="dddddd" style="width: 256px" mode="inline">
             <template v-for="menu in menus">
               <a-sub-menu v-if="menu.children" :key="menu.code">
-                <template #title>{{ menu.title }}</template>
+                <template #title>{{ $t(menu.code) }}</template>
                 <template #expandIcon>
                   <svg
                     class="arrow-icon"
@@ -340,38 +387,63 @@
                 </template>
                 <a-menu-item-group :key="menu.code">
                   <a-menu-item v-for="item in menu.children" :key="item.code">
-                    <nuxt-link :to="item.link" @click.native="onClickMenu">{{
-                      item.title
-                    }}</nuxt-link>
+                    <nuxt-link
+                      :to="localePath(item.link)"
+                      @click.native="onClickMenu"
+                      >{{ $t(item.code) }}</nuxt-link
+                    >
                   </a-menu-item>
                 </a-menu-item-group>
               </a-sub-menu>
               <a-menu-item v-else :key="menu.code + 'else'">
-                <nuxt-link :to="menu.link" @click.native="onClickMenu">
-                  {{ menu.title }}
+                <nuxt-link
+                  v-if="menu.code === 'contacts'"
+                  :to="'#contacts'"
+                  @click.native="onClickMenu"
+                >
+                  {{ $t(menu.code) }}
+                </nuxt-link>
+                <nuxt-link
+                  v-else
+                  :to="localePath(menu.link)"
+                  @click.native="onClickMenu"
+                >
+                  {{ $t(menu.code) }}
                 </nuxt-link>
               </a-menu-item>
             </template>
           </a-menu>
           <ul class="sub-header__info-social">
             <li>
-              <a href="#" class="sub-header__info-social__icon">
+              <a
+                href="https://instagram.com/iyman.fondu?igshid=YmMyMTA2M2Y="
+                target="_blank"
+                class="sub-header__info-social__icon"
+              >
                 <img src="/icon/instagram.svg" />
               </a>
             </li>
             <li>
-              <a href="#" class="sub-header__info-social__icon">
+              <a
+                href="https://www.facebook.com/yimanfondu"
+                target="_blank"
+                class="sub-header__info-social__icon"
+              >
                 <img src="/icon/facebook.svg" />
               </a>
             </li>
             <li>
-              <a href="#" class="sub-header__info-social__icon">
+              <a
+                href="https://twitter.com/yimanfond"
+                target="_blank"
+                class="sub-header__info-social__icon"
+              >
                 <img src="/icon/twitter.svg" />
               </a>
             </li>
           </ul>
         </div>
-        <nuxt-link to="/">
+        <nuxt-link :to="localePath('/')">
           <img src="/img/logo-mobile.svg" :alt="$t('fondDesc')" />
         </nuxt-link>
         <button class="header__main--support" @click="isOpenModal = true">
@@ -389,25 +461,6 @@
           </svg>
         </button>
       </div>
-      <!-- <div class="header__main--on-scroll">
-        <button class="header__main--burger">
-          <svg
-            width="24"
-            height="22"
-            viewBox="0 0 24 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M24 0H0V2.66667H24V0ZM16 9.33333H0V12H16V9.33333ZM24 18.6667H0V21.3333H24V18.6667Z"
-              fill="black"
-            />
-          </svg>
-        </button>
-        <nuxt-link to="/">
-          <img src="/img/logo-mobile.svg" :alt="$t('fondDesc')" />
-        </nuxt-link>
-      </div> -->
     </div>
     <a-modal v-model="isOpenModal" title="" :footer="null" :width="1108">
       <i-donation />

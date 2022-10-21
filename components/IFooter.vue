@@ -66,6 +66,15 @@
             </li>
             <li>
               <a
+                href="https://instagram.com/iyman.fondu?igshid=YmMyMTA2M2Y="
+                target="_blank"
+                class="social__link"
+              >
+                <Instagram />
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://www.facebook.com/yimanfondu"
                 class="social__link"
                 target="_blank"
@@ -94,11 +103,12 @@ import Facebook from '@/static/icon/facebook.svg'
 // import Instagram from '@/static/icon/instagram.svg'
 import Twitter from '@/static/icon/twitter.svg'
 import Telegram from '@/static/icon/telegram.svg'
+import Instagram from '@/static/icon/instagram.svg'
 export default {
   name: 'IFooter',
   components: {
     Facebook,
-    // Instagram,
+    Instagram,
     Twitter,
     Telegram,
   },
@@ -108,34 +118,36 @@ export default {
 <style lang="scss">
 .social {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   column-gap: 29px;
 
   @media (max-width: 840px) {
-    /* width: 100%; */
     justify-items: center;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
     row-gap: 17px;
     margin: auto;
-    column-gap: 49px;
+    column-gap: 35px;
   }
 
   &__title {
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
-    color: #ffffff;
+    /* color: #ffffff; */
     text-transform: uppercase;
 
     @media (max-width: 840px) {
       font-size: 15px;
       line-height: 19px;
-      grid-column: 1 / 4;
+      grid-column: 1 / 5;
       grid-row: 1;
     }
   }
 }
 .social__link {
+  display: flex;
+  align-items: center;
+  height: 100%;
   path {
     fill: #ffffff;
   }

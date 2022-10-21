@@ -5,48 +5,48 @@ export const menus = [
     children: [
       {
         title: 'Новости',
-        code: 'main_news',
+        code: 'news',
         link: '/news',
       },
       {
         title: 'Ссылки',
-        code: 'main_links',
+        code: 'links',
         link: '/links',
       },
       {
         title: 'Галерея',
-        code: 'main_gallery',
+        code: 'gallery',
         link: '/gallery',
       },
       {
         title: 'Контакты',
-        code: 'main__contacts',
+        code: 'contacts',
         link: '#contacts',
       },
     ],
   },
   {
     title: 'О ФРДК «Ыйман»',
-    code: 'frdk',
+    code: 'aboutFond',
     children: [
       {
         title: 'О ФРДК «Ыйман»',
-        code: 'about_frdk',
+        code: 'aboutFond',
         link: '/about/about-us',
       },
       {
         title: 'Организационная структура',
-        code: 'frdk_org',
+        code: 'orgStructure',
         link: '/about/organization',
       },
       {
         title: 'История создания',
-        code: 'frdk_history',
+        code: 'historyCreation',
         link: '/about/history',
       },
       {
         title: 'Председатель правления',
-        code: 'frdk_chairman',
+        code: 'chairman',
         link: '/about/chairman',
       },
     ],
@@ -62,12 +62,12 @@ export const menus = [
       },
       {
         title: 'Проектная деятельность',
-        code: 'activity_project',
+        code: 'projectActivities',
         link: '/activity/project',
       },
       {
         title: 'Международное сотрудничество',
-        code: 'activity_cooperation',
+        code: 'internationalCoop',
         link: '/activity/organizations',
       },
     ],

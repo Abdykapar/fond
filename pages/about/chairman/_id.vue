@@ -11,9 +11,7 @@
 
       <img :src="single.image" class="page-avatar" />
 
-      <div class="page-content min-height">
-        {{ itemContent.content }}
-      </div>
+      <div class="page-content min-height" v-html="itemContent.content"></div>
       <div>
         <h2 class="section-title">{{ $t('exChairman') }}</h2>
         <div class="chairmans">
