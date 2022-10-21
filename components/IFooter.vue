@@ -1,7 +1,7 @@
 <template>
   <div class="footer__wrapper">
     <div id="contacts" class="container">
-      <h2 class="section-title section-title--white">{{ $t('contacts') }}</h2>
+      <h2 class="section-title">{{ $t('contacts') }}</h2>
       <div class="footer">
         <ul class="footer__contacts">
           <li v-html="$t('address')" />

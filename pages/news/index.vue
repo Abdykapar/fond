@@ -7,10 +7,12 @@
       </a-breadcrumb-item>
       <a-breadcrumb-item>{{ $t('news') }}</a-breadcrumb-item>
     </i-breadcrumb>
-    <div class="grid container">
-      <i-card v-for="item in news" :key="item.id" :item="item" />
-      <i-pagination />
-    </div>
+    <client-only>
+      <div class="grid container">
+        <i-card v-for="item in news" :key="item.id" :item="item" />
+        <i-pagination />
+      </div>
+    </client-only>
     <i-footer />
   </div>
 </template>

@@ -45,9 +45,7 @@
   }
 
   &__wrapper {
-    background-color: #1f1f1f;
     padding-top: 32px;
-    padding-bottom: 40px;
     margin-top: 20px;
     @media (max-width: 840px) {
       padding-top: 1px;
@@ -67,11 +65,13 @@
 }
 
 footer {
+  background-color: #1f1f1f;
+  padding-bottom: 40px;
   .footer__body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 28px;
+    padding-top: 47px;
 
     @media (max-width: 840px) {
       flex-direction: column-reverse;

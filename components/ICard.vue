@@ -9,9 +9,8 @@
           {{ itemContent.title }}
         </h3>
       </router-link>
-      <slot :content="itemContent">
-        <p class="i-card__text" v-html="itemContent.content"></p>
-      </slot>
+
+      <p class="i-card__text" v-html="itemContent.content"></p>
       <span class="i-card__date">{{ format(item.updated_at) }}</span>
     </div>
   </div>
