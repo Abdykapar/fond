@@ -36,6 +36,7 @@ export default {
     ['nuxt-leaflet', { attributionControl: false }],
     'nuxt-svg-loader',
     '@nuxtjs/i18n',
+    ['nuxt-buefy', { materialDesignIcons: false }],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

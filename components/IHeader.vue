@@ -73,40 +73,51 @@
         </div>
       </div>
       <div class="container">
-        <ul class="menu">
-          <li v-for="menu in menus" :key="menu.code" class="menu__item">
-            <a-dropdown v-if="menu.children" v-model="menu.isShow">
-              <a class="menu__link" @click.prevent>
-                {{ menu.title }}
+        <client-only>
+          <ul class="menu">
+            <li v-for="menu in menus" :key="menu.code" class="menu__item">
+              <b-dropdown
+                v-if="menu.children"
+                :triggers="['hover']"
+                aria-role="list"
+              >
+                <template #trigger>
+                  <!-- <b-button
+                  label="Hover me!"
+                  type="is-info"
+                  icon-right="menu-down"
+                /> -->
+                  <button class="menu__link">
+                    {{ menu.title }}
 
-                <svg
-                  width="8"
-                  height="14"
-                  viewBox="0 0 8 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.172 6.99999L0.222 2.04999L1.636 0.635986L8 6.99999L1.636 13.364L0.222 11.95L5.172 6.99999Z"
-                    fill="black"
-                  />
-                </svg>
-              </a>
-              <template #overlay>
-                <a-menu @click="() => (menu.isShow = false)">
-                  <a-menu-item v-for="child in menu.children" :key="child.code">
+                    <svg
+                      width="8"
+                      height="14"
+                      viewBox="0 0 8 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.172 6.99999L0.222 2.04999L1.636 0.635986L8 6.99999L1.636 13.364L0.222 11.95L5.172 6.99999Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </button>
+                </template>
+                <template v-for="child in menu.children">
+                  <b-dropdown-item :key="child.code" aria-role="listitem">
                     <nuxt-link class="menu__link" :to="child.link">
                       {{ child.title }}
                     </nuxt-link>
-                  </a-menu-item>
-                </a-menu>
-              </template>
-            </a-dropdown>
-            <nuxt-link v-else class="menu__link" :to="menu.link">{{
-              menu.title
-            }}</nuxt-link>
-          </li>
-        </ul>
+                  </b-dropdown-item>
+                </template>
+              </b-dropdown>
+              <nuxt-link v-else class="menu__link" :to="menu.link">{{
+                menu.title
+              }}</nuxt-link>
+            </li>
+          </ul>
+        </client-only>
       </div>
       <div class="header__on-scroll" :class="{ show: isHideTop }">
         <div class="sub-header__wrapper">
@@ -191,43 +202,51 @@
           </div>
         </div>
         <div class="container">
-          <ul class="menu">
-            <li v-for="menu in menus" :key="menu.code" class="menu__item">
-              <a-dropdown v-if="menu.children" v-model="menu.show">
-                <a class="menu__link" @click.prevent>
-                  {{ menu.title }}
+          <client-only>
+            <ul class="menu">
+              <li v-for="menu in menus" :key="menu.code" class="menu__item">
+                <b-dropdown
+                  v-if="menu.children"
+                  :triggers="['hover']"
+                  aria-role="list"
+                >
+                  <template #trigger>
+                    <!-- <b-button
+                  label="Hover me!"
+                  type="is-info"
+                  icon-right="menu-down"
+                /> -->
+                    <button class="menu__link">
+                      {{ menu.title }}
 
-                  <svg
-                    width="8"
-                    height="14"
-                    viewBox="0 0 8 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5.172 6.99999L0.222 2.04999L1.636 0.635986L8 6.99999L1.636 13.364L0.222 11.95L5.172 6.99999Z"
-                      fill="black"
-                    />
-                  </svg>
-                </a>
-                <template #overlay>
-                  <a-menu @click="() => (menu.show = false)">
-                    <a-menu-item
-                      v-for="child in menu.children"
-                      :key="child.code"
-                    >
+                      <svg
+                        width="8"
+                        height="14"
+                        viewBox="0 0 8 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.172 6.99999L0.222 2.04999L1.636 0.635986L8 6.99999L1.636 13.364L0.222 11.95L5.172 6.99999Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </button>
+                  </template>
+                  <template v-for="child in menu.children">
+                    <b-dropdown-item :key="child.code" aria-role="listitem">
                       <nuxt-link class="menu__link" :to="child.link">
                         {{ child.title }}
                       </nuxt-link>
-                    </a-menu-item>
-                  </a-menu>
-                </template>
-              </a-dropdown>
-              <nuxt-link v-else class="menu__link" :to="menu.link">{{
-                menu.title
-              }}</nuxt-link>
-            </li>
-          </ul>
+                    </b-dropdown-item>
+                  </template>
+                </b-dropdown>
+                <nuxt-link v-else class="menu__link" :to="menu.link">{{
+                  menu.title
+                }}</nuxt-link>
+              </li>
+            </ul>
+          </client-only>
         </div>
       </div>
     </div>
@@ -417,6 +436,7 @@ export default {
       isShowSearch: false,
       visible: false,
       showMenu: false,
+      showDropdown: false,
     }
   },
   computed: {

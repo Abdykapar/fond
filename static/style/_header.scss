@@ -343,6 +343,9 @@
     line-height: 20px;
     display: flex;
     align-items: center;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
 
     &:hover {
       svg path {

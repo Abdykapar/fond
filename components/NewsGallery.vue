@@ -10,7 +10,8 @@
           :key="img.id"
           class="gallery__img__wrapper"
         >
-          <img :src="img.image" class="gallery__img" />
+          <ImageModal :img="img.image" />
+          <!-- <img :src="img.image" class="gallery__img" /> -->
           <button class="gallery__btn" @click="showAll = !showAll">
             <svg
               width="45"
@@ -26,20 +27,23 @@
             </svg>
           </button>
         </div>
-        <img
+        <ImageModal v-else :key="img.id + 'else'" :img="img.image" />
+        <!-- <img
           v-else
           :key="img.id + 'else'"
           :src="img.image"
           class="gallery__img"
-        />
+        /> -->
       </template>
     </div>
   </div>
 </template>
 
 <script>
+import ImageModal from './ImageModal.vue'
 export default {
   name: 'NewsGallery',
+  components: { ImageModal },
   props: {
     images: {
       type: Array,

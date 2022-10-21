@@ -13,12 +13,14 @@
     "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
   },
   "dependencies": {
+    "@innologica/vue-dropdown-menu": "^0.1.4",
     "@nuxtjs/i18n": "^7.2.2",
     "ant-design-vue": "^1.7.8",
     "axios": "^0.27.2",
     "core-js": "^3.19.3",
     "moment": "^2.29.3",
     "nuxt": "^2.15.8",
+    "nuxt-buefy": "^0.4.24",
     "nuxt-gmaps": "^1.2.10",
     "nuxt-leaflet": "0.0.27",
     "nuxt-svg-loader": "^1.2.0",
