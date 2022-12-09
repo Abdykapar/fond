@@ -69,6 +69,24 @@
                     <img src="/icon/twitter.svg" />
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://twitter.com/yimanfond"
+                    target="_blank"
+                    class="sub-header__info-social__icon"
+                  >
+                    <img src="/icon/whatsapp.svg" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/yimanfond"
+                    target="_blank"
+                    class="sub-header__info-social__icon"
+                  >
+                    <img src="/icon/telegram.svg" />
+                  </a>
+                </li>
               </ul>
             </div>
             <div class="sub-header__logo">

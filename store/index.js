@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://api.iyman.kg/api'
+axios.defaults.baseURL = 'https://api.iyman.kg/api'
 axios.defaults.headers.common.Accept = 'application/json'
 
 const newsPrefix = '/news'

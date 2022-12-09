@@ -133,7 +133,7 @@ export default {
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
-    /* color: #ffffff; */
+    color: #ffffff;
     text-transform: uppercase;
 
     @media (max-width: 840px) {
