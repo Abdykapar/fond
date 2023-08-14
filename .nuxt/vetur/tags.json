@@ -1,0 +1,50 @@
+{
+  "IBreadcrumb": {
+    "description": "Auto imported from components/IBreadcrumb.vue"
+  },
+  "ICard": {
+    "description": "Auto imported from components/ICard.vue"
+  },
+  "ICard2": {
+    "description": "Auto imported from components/ICard2.vue"
+  },
+  "IDonation": {
+    "description": "Auto imported from components/IDonation.vue"
+  },
+  "IFooter": {
+    "description": "Auto imported from components/IFooter.vue"
+  },
+  "IHeader": {
+    "description": "Auto imported from components/IHeader.vue"
+  },
+  "IPagination": {
+    "description": "Auto imported from components/IPagination.vue"
+  },
+  "ImageCard": {
+    "description": "Auto imported from components/ImageCard.vue"
+  },
+  "ImageList": {
+    "description": "Auto imported from components/ImageList.vue"
+  },
+  "ImageModal": {
+    "description": "Auto imported from components/ImageModal.vue"
+  },
+  "LinksList": {
+    "description": "Auto imported from components/LinksList.vue"
+  },
+  "MediaList": {
+    "description": "Auto imported from components/MediaList.vue"
+  },
+  "NewsGallery": {
+    "description": "Auto imported from components/NewsGallery.vue"
+  },
+  "NewsList": {
+    "description": "Auto imported from components/NewsList.vue"
+  },
+  "HomeSlider": {
+    "description": "Auto imported from components/home/HomeSlider.vue"
+  },
+  "NewsContent": {
+    "description": "Auto imported from components/news/NewsContent.vue"
+  }
+}

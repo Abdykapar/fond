@@ -1,0 +1,344 @@
+[
+  {
+    "name": "charity___ky",
+    "path": "/charity",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/charity.vue",
+    "chunkName": "pages/charity"
+  },
+  {
+    "name": "index___en",
+    "path": "/en",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/index.vue",
+    "chunkName": "pages/index"
+  },
+  {
+    "name": "gallery___ky",
+    "path": "/gallery",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/gallery/index.vue",
+    "chunkName": "pages/gallery/index"
+  },
+  {
+    "name": "links___ky",
+    "path": "/links",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/links/index.vue",
+    "chunkName": "pages/links/index"
+  },
+  {
+    "name": "media___ky",
+    "path": "/media",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/media/index.vue",
+    "chunkName": "pages/media/index"
+  },
+  {
+    "name": "news___ky",
+    "path": "/news",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/news/index.vue",
+    "chunkName": "pages/news/index"
+  },
+  {
+    "name": "index___ru",
+    "path": "/ru",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/index.vue",
+    "chunkName": "pages/index"
+  },
+  {
+    "name": "search___ky",
+    "path": "/search",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/search.vue",
+    "chunkName": "pages/search"
+  },
+  {
+    "name": "about-about-us___ky",
+    "path": "/about/about-us",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/about-us.vue",
+    "chunkName": "pages/about/about-us"
+  },
+  {
+    "name": "about-chairman___ky",
+    "path": "/about/chairman",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/chairman/index.vue",
+    "chunkName": "pages/about/chairman/index"
+  },
+  {
+    "name": "about-history___ky",
+    "path": "/about/history",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/history.vue",
+    "chunkName": "pages/about/history"
+  },
+  {
+    "name": "about-organization___ky",
+    "path": "/about/organization",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/organization.vue",
+    "chunkName": "pages/about/organization"
+  },
+  {
+    "name": "activity-event___ky",
+    "path": "/activity/event",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/event/index.vue",
+    "chunkName": "pages/activity/event/index"
+  },
+  {
+    "name": "activity-organizations___ky",
+    "path": "/activity/organizations",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/organizations/index.vue",
+    "chunkName": "pages/activity/organizations/index"
+  },
+  {
+    "name": "activity-project___ky",
+    "path": "/activity/project",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/project.vue",
+    "chunkName": "pages/activity/project"
+  },
+  {
+    "name": "charity___en",
+    "path": "/en/charity",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/charity.vue",
+    "chunkName": "pages/charity"
+  },
+  {
+    "name": "gallery___en",
+    "path": "/en/gallery",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/gallery/index.vue",
+    "chunkName": "pages/gallery/index"
+  },
+  {
+    "name": "links___en",
+    "path": "/en/links",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/links/index.vue",
+    "chunkName": "pages/links/index"
+  },
+  {
+    "name": "media___en",
+    "path": "/en/media",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/media/index.vue",
+    "chunkName": "pages/media/index"
+  },
+  {
+    "name": "news___en",
+    "path": "/en/news",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/news/index.vue",
+    "chunkName": "pages/news/index"
+  },
+  {
+    "name": "search___en",
+    "path": "/en/search",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/search.vue",
+    "chunkName": "pages/search"
+  },
+  {
+    "name": "charity___ru",
+    "path": "/ru/charity",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/charity.vue",
+    "chunkName": "pages/charity"
+  },
+  {
+    "name": "gallery___ru",
+    "path": "/ru/gallery",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/gallery/index.vue",
+    "chunkName": "pages/gallery/index"
+  },
+  {
+    "name": "links___ru",
+    "path": "/ru/links",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/links/index.vue",
+    "chunkName": "pages/links/index"
+  },
+  {
+    "name": "media___ru",
+    "path": "/ru/media",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/media/index.vue",
+    "chunkName": "pages/media/index"
+  },
+  {
+    "name": "news___ru",
+    "path": "/ru/news",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/news/index.vue",
+    "chunkName": "pages/news/index"
+  },
+  {
+    "name": "search___ru",
+    "path": "/ru/search",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/search.vue",
+    "chunkName": "pages/search"
+  },
+  {
+    "name": "about-about-us___en",
+    "path": "/en/about/about-us",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/about-us.vue",
+    "chunkName": "pages/about/about-us"
+  },
+  {
+    "name": "about-chairman___en",
+    "path": "/en/about/chairman",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/chairman/index.vue",
+    "chunkName": "pages/about/chairman/index"
+  },
+  {
+    "name": "about-history___en",
+    "path": "/en/about/history",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/history.vue",
+    "chunkName": "pages/about/history"
+  },
+  {
+    "name": "about-organization___en",
+    "path": "/en/about/organization",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/organization.vue",
+    "chunkName": "pages/about/organization"
+  },
+  {
+    "name": "activity-event___en",
+    "path": "/en/activity/event",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/event/index.vue",
+    "chunkName": "pages/activity/event/index"
+  },
+  {
+    "name": "activity-organizations___en",
+    "path": "/en/activity/organizations",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/organizations/index.vue",
+    "chunkName": "pages/activity/organizations/index"
+  },
+  {
+    "name": "activity-project___en",
+    "path": "/en/activity/project",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/project.vue",
+    "chunkName": "pages/activity/project"
+  },
+  {
+    "name": "about-about-us___ru",
+    "path": "/ru/about/about-us",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/about-us.vue",
+    "chunkName": "pages/about/about-us"
+  },
+  {
+    "name": "about-chairman___ru",
+    "path": "/ru/about/chairman",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/chairman/index.vue",
+    "chunkName": "pages/about/chairman/index"
+  },
+  {
+    "name": "about-history___ru",
+    "path": "/ru/about/history",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/history.vue",
+    "chunkName": "pages/about/history"
+  },
+  {
+    "name": "about-organization___ru",
+    "path": "/ru/about/organization",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/organization.vue",
+    "chunkName": "pages/about/organization"
+  },
+  {
+    "name": "activity-event___ru",
+    "path": "/ru/activity/event",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/event/index.vue",
+    "chunkName": "pages/activity/event/index"
+  },
+  {
+    "name": "activity-organizations___ru",
+    "path": "/ru/activity/organizations",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/organizations/index.vue",
+    "chunkName": "pages/activity/organizations/index"
+  },
+  {
+    "name": "activity-project___ru",
+    "path": "/ru/activity/project",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/project.vue",
+    "chunkName": "pages/activity/project"
+  },
+  {
+    "name": "about-chairman-id___en",
+    "path": "/en/about/chairman/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/chairman/_id.vue",
+    "chunkName": "pages/about/chairman/_id"
+  },
+  {
+    "name": "activity-event-id___en",
+    "path": "/en/activity/event/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/event/_id.vue",
+    "chunkName": "pages/activity/event/_id"
+  },
+  {
+    "name": "activity-organizations-id___en",
+    "path": "/en/activity/organizations/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/organizations/_id.vue",
+    "chunkName": "pages/activity/organizations/_id"
+  },
+  {
+    "name": "about-chairman-id___ru",
+    "path": "/ru/about/chairman/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/chairman/_id.vue",
+    "chunkName": "pages/about/chairman/_id"
+  },
+  {
+    "name": "activity-event-id___ru",
+    "path": "/ru/activity/event/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/event/_id.vue",
+    "chunkName": "pages/activity/event/_id"
+  },
+  {
+    "name": "activity-organizations-id___ru",
+    "path": "/ru/activity/organizations/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/organizations/_id.vue",
+    "chunkName": "pages/activity/organizations/_id"
+  },
+  {
+    "name": "about-chairman-id___ky",
+    "path": "/about/chairman/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/about/chairman/_id.vue",
+    "chunkName": "pages/about/chairman/_id"
+  },
+  {
+    "name": "activity-event-id___ky",
+    "path": "/activity/event/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/event/_id.vue",
+    "chunkName": "pages/activity/event/_id"
+  },
+  {
+    "name": "activity-organizations-id___ky",
+    "path": "/activity/organizations/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/activity/organizations/_id.vue",
+    "chunkName": "pages/activity/organizations/_id"
+  },
+  {
+    "name": "gallery-id___en",
+    "path": "/en/gallery/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/gallery/_id.vue",
+    "chunkName": "pages/gallery/_id"
+  },
+  {
+    "name": "news-id___en",
+    "path": "/en/news/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/news/_id.vue",
+    "chunkName": "pages/news/_id"
+  },
+  {
+    "name": "gallery-id___ru",
+    "path": "/ru/gallery/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/gallery/_id.vue",
+    "chunkName": "pages/gallery/_id"
+  },
+  {
+    "name": "news-id___ru",
+    "path": "/ru/news/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/news/_id.vue",
+    "chunkName": "pages/news/_id"
+  },
+  {
+    "name": "gallery-id___ky",
+    "path": "/gallery/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/gallery/_id.vue",
+    "chunkName": "pages/gallery/_id"
+  },
+  {
+    "name": "news-id___ky",
+    "path": "/news/:id",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/news/_id.vue",
+    "chunkName": "pages/news/_id"
+  },
+  {
+    "name": "index___ky",
+    "path": "/",
+    "component": "/Users/abdykapar/Documents/Code/iyman-fond/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]
