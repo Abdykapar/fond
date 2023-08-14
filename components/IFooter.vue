@@ -19,13 +19,13 @@
             <a
               class="footer__tel"
               target="_blank"
-              href="https://wa.me/+996555015566"
-              >+996555015566</a
+              href="https://wa.me/+996773000600"
+              >+996773000600</a
             >
           </li>
           <li>
-            <a class="footer__mail" href="mailto:yimanfond@gmail.com"
-              >yimanfond@gmail.com</a
+            <a class="footer__mail" href="mailto:iymanfond22@gmail.com"
+              >iymanfond22@gmail.com</a
             >
           </li>
         </ul>
